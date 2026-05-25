@@ -54,8 +54,12 @@ test('recycle bin endpoints list restore and permanently delete soft deleted mat
         ->assertJsonPath('data.summary.brick', 1)
         ->assertJsonPath('data.items.0.id', $brick->id)
         ->assertJsonPath('data.items.0.family', 'brick')
+        ->assertJsonPath('data.items.0.material_type', 'brick')
+        ->assertJsonPath('data.items.0.brand', 'Brick Recycle')
+        ->assertJsonPath('data.items.0.row_material_type', 'brick')
         ->assertJsonPath('data.items.0.deleted_by.id', $actor->id)
-        ->assertJsonPath('data.items.0.deleted_by.name', 'Recycle Operator');
+        ->assertJsonPath('data.items.0.deleted_by.name', 'Recycle Operator')
+        ->assertJsonPath('data.items.0.deleted_by_name', 'Recycle Operator');
 
     $restoreResponse = $this
         ->withHeaders(trustedRecycleHeaders($actor))
@@ -91,6 +95,46 @@ test('recycle bin endpoints list restore and permanently delete soft deleted mat
     $this->assertDatabaseMissing('bricks', [
         'id' => $brick->id,
     ]);
+});
+
+test('delete request auto-syncs shadow actor user from headers for recycle metadata', function (): void {
+    $brick = Brick::factory()->create([
+        'brand' => 'Brick Shadow Actor',
+    ]);
+
+    $deleteResponse = $this
+        ->withHeaders([
+            'X-Service-Name' => 'supply-service-fe',
+            'X-Service-Token' => 'supply-fe-test-token',
+            'X-Actor-Id' => '501',
+            'X-Actor-Name' => 'Shadow Supply User',
+            'X-Actor-Email' => 'shadow501@example.test',
+        ])
+        ->deleteJson("/api/v1/materials/brick/{$brick->id}");
+
+    $deleteResponse->assertOk()
+        ->assertJsonPath('message', 'Material deleted successfully');
+
+    $this->assertDatabaseHas('users', [
+        'id' => 501,
+        'name' => 'Shadow Supply User',
+        'email' => 'shadow501@example.test',
+    ]);
+
+    $indexResponse = $this
+        ->withHeaders([
+            'X-Service-Name' => 'supply-service-fe',
+            'X-Service-Token' => 'supply-fe-test-token',
+            'X-Actor-Id' => '501',
+            'X-Actor-Name' => 'Shadow Supply User',
+            'X-Actor-Email' => 'shadow501@example.test',
+        ])
+        ->getJson('/api/v1/materials/recycle-bin');
+
+    $indexResponse->assertOk()
+        ->assertJsonPath('data.items.0.deleted_by.id', 501)
+        ->assertJsonPath('data.items.0.deleted_by.name', 'Shadow Supply User')
+        ->assertJsonPath('data.items.0.deleted_by_name', 'Shadow Supply User');
 });
 
 function trustedRecycleHeaders(User $actor): array

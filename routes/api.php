@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\V1\MaterialSettingsApiController;
 use App\Http\Controllers\Api\V1\StoreApiController;
 use App\Http\Controllers\Api\V1\StoreLocationApiController;
 use App\Http\Controllers\Api\V1\StoreSearchApiController;
+use App\Http\Controllers\Api\V1\StoreSearchRadiusSettingsApiController;
 use App\Http\Controllers\Api\V1\SupplyReferenceController;
 use App\Http\Controllers\Api\V1\UnitApiController;
 use Illuminate\Support\Facades\Route;
@@ -57,6 +58,8 @@ Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1')->group(func
 
     Route::get('/material-settings', [MaterialSettingsApiController::class, 'index']);
     Route::put('/material-settings', [MaterialSettingsApiController::class, 'update']);
+    Route::get('/settings/store-search-radius', [StoreSearchRadiusSettingsApiController::class, 'index']);
+    Route::put('/settings/store-search-radius', [StoreSearchRadiusSettingsApiController::class, 'update']);
 
     Route::get('/stores/{storeId}/locations/{locationId}/materials', [StoreLocationApiController::class, 'materials'])
         ->whereNumber('storeId')

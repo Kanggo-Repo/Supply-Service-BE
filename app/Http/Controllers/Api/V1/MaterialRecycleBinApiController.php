@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\MaterialChangeLog;
 use App\Support\Supply\SupplyMaterialLabelResolver;
 use App\Support\Supply\SupplyMaterialRegistry;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 
@@ -28,17 +29,7 @@ class MaterialRecycleBinApiController extends Controller
 
             $summary[$family] = $deleted->count();
 
-            $items = $items->concat($deleted->map(fn (Model $material): array => [
-                'id' => $material->getKey(),
-                'family' => $family,
-                'label' => SupplyMaterialLabelResolver::resolve($material),
-                'deleted_at' => $material->deleted_at?->toIso8601String(),
-                'deleted_by' => [
-                    'id' => $material->deleted_by,
-                    'name' => $material->deletedBy?->name,
-                    'email' => $material->deletedBy?->email,
-                ],
-            ]));
+            $items = $items->concat($deleted->map(fn (Model $material): array => $this->serializeDeletedMaterial($family, $material)));
         }
 
         return response()->json([
@@ -99,6 +90,69 @@ class MaterialRecycleBinApiController extends Controller
             ...$material->toArray(),
             'family' => $family,
             'label' => SupplyMaterialLabelResolver::resolve($material),
+        ];
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    private function serializeDeletedMaterial(string $family, Model $material): array
+    {
+        $deletedAt = $material->deleted_at instanceof CarbonInterface ? $material->deleted_at : null;
+        $deletedActor = $this->resolveDeletedActor($material);
+
+        return [
+            ...$material->toArray(),
+            'family' => $family,
+            'material_type' => $family,
+            'row_material_type' => $family,
+            'material_kind' => $family,
+            'label' => SupplyMaterialLabelResolver::resolve($material),
+            'deleted_at' => $deletedAt?->toIso8601String(),
+            'deleted_at_formatted' => $deletedAt?->format('d-m-Y H:i:s'),
+            'deleted_by_name' => $deletedActor['name'],
+            'deleted_by' => [
+                'id' => $deletedActor['id'],
+                'name' => $deletedActor['name'],
+                'email' => $deletedActor['email'],
+            ],
+        ];
+    }
+
+    /**
+     * @return array{id:int|null,name:string|null,email:string|null}
+     */
+    private function resolveDeletedActor(Model $material): array
+    {
+        if ($material->deletedBy) {
+            return [
+                'id' => is_numeric($material->deleted_by) ? (int) $material->deleted_by : null,
+                'name' => $material->deletedBy->name,
+                'email' => $material->deletedBy->email,
+            ];
+        }
+
+        $deletedLog = MaterialChangeLog::query()
+            ->with('user')
+            ->where('material_table', $material->getTable())
+            ->where('material_id', $material->getKey())
+            ->where('action', 'deleted')
+            ->latest('edited_at')
+            ->latest('id')
+            ->first();
+
+        if (! $deletedLog) {
+            return [
+                'id' => is_numeric($material->deleted_by) ? (int) $material->deleted_by : null,
+                'name' => null,
+                'email' => null,
+            ];
+        }
+
+        return [
+            'id' => $deletedLog->user_id ? (int) $deletedLog->user_id : (is_numeric($material->deleted_by) ? (int) $material->deleted_by : null),
+            'name' => $deletedLog->user?->name,
+            'email' => $deletedLog->user?->email,
         ];
     }
 }

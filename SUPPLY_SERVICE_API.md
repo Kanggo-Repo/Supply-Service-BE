@@ -1,18 +1,18 @@
 # Supply Service API
 
-Dokumen ini mencatat surface API `supply-service-be` yang sudah hidup sampai `Wave 4`.
+Dokumen ini mencatat surface API `supply-service-be` yang sudah hidup sampai `Wave 7`.
 
-## Kenapa perlu dites dulu sebelum Wave 5
+## Kenapa tetap perlu dites sebelum Wave 8
 
 Perlu. Alasannya:
 
 - `Wave 1-3` sudah membentuk contract dasar supply: reference, material owner API, unit API, settings, audit/history, dan recycle bin.
-- `Wave 4` sudah menambah store network CRUD, snapshot sync, location material availability query, dan store search/radius capability, sehingga contract ini sebaiknya dismoke-test sebelum lanjut ke fase berikutnya.
+- `Wave 4-7` sudah menambah store network CRUD, snapshot sync, location material availability query, store search/radius capability, dan compatibility contract untuk donor FE 1:1.
 - test feature yang sudah ada memverifikasi behavior inti, tetapi tetap perlu smoke test manual/integration untuk memastikan payload, auth header, dan urutan lifecycle cocok untuk consumer nyata seperti `supply-service-fe` dan nanti `calculation-service-be`.
 
 ## Status saat ini
 
-- automated test: `26` test hijau
+- automated test: `41` test hijau
 - auth service: private service-to-service
 - actor context: header transisi dari caller tepercaya
 - base path: `/api/v1`
@@ -353,6 +353,32 @@ Body:
 }
 ```
 
+### Store Search Radius Settings API
+
+#### `GET /api/v1/settings/store-search-radius`
+
+Response ringkas:
+
+```json
+{
+  "data": {
+    "project_store_radius_default_km": 10,
+    "project_store_radius_final_km": 15
+  }
+}
+```
+
+#### `PUT /api/v1/settings/store-search-radius`
+
+Body:
+
+```json
+{
+  "project_store_radius_default_km": 12.5,
+  "project_store_radius_final_km": 18
+}
+```
+
 ### Store Network API
 
 #### `GET /api/v1/stores`
@@ -492,7 +518,7 @@ Behavior:
 - buat lokasi baru bila address baru
 - kembalikan `422` + `requires_location_selection=true` bila satu toko punya lebih dari satu kandidat lokasi valid
 
-## Minimal Smoke Test Sebelum Wave 5
+## Minimal Smoke Test Sebelum Wave 8
 
 Urutan yang direkomendasikan:
 
@@ -511,8 +537,9 @@ Urutan yang direkomendasikan:
 13. create/update/delete store location
 14. cek location materials endpoint
 15. cek store search dan quick create
+16. read/update store search radius settings
 
-Kalau semua lolos, baru lanjut `Wave 5`.
+Kalau semua lolos, kontrak backend supply cukup aman untuk menutup `Wave 7`.
 
 ## Panduan Testing Manual Dengan Postman
 
@@ -998,7 +1025,30 @@ Body:
 }
 ```
 
-### 14. Checklist lulus manual test
+### 14. Test store search radius settings API
+
+#### Read settings
+
+Request:
+
+- `GET {{base_url}}/api/v1/settings/store-search-radius`
+
+#### Update settings
+
+Request:
+
+- `PUT {{base_url}}/api/v1/settings/store-search-radius`
+
+Body:
+
+```json
+{
+  "project_store_radius_default_km": 12.5,
+  "project_store_radius_final_km": 18
+}
+```
+
+### 15. Checklist lulus manual test
 
 Manual test dianggap cukup aman kalau poin berikut lolos:
 
@@ -1014,6 +1064,7 @@ Manual test dianggap cukup aman kalau poin berikut lolos:
 - store location create/update/delete berjalan
 - location materials endpoint merespons grouping material
 - store search dan quick create berjalan
+- store search radius settings read/write berjalan
 
 ## Contoh Curl
 
