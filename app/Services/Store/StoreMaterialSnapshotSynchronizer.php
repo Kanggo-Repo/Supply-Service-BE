@@ -4,6 +4,7 @@ namespace App\Services\Store;
 
 use App\Models\Store;
 use App\Models\StoreLocation;
+use App\Models\StoreMaterialAvailability;
 use App\Support\Supply\SupplyMaterialRegistry;
 use Illuminate\Database\Eloquent\Model;
 
@@ -35,6 +36,8 @@ class StoreMaterialSnapshotSynchronizer
                     if ($material->isDirty()) {
                         $material->save();
                     }
+
+                    $this->ensureAvailabilityLink($material, $location);
                 });
         }
     }
@@ -53,7 +56,26 @@ class StoreMaterialSnapshotSynchronizer
                     if ($material->isDirty()) {
                         $material->save();
                     }
+
+                    StoreMaterialAvailability::query()
+                        ->where('store_location_id', $location->id)
+                        ->where('materialable_type', $material::class)
+                        ->where('materialable_id', (int) $material->getKey())
+                        ->delete();
                 });
         }
+    }
+
+    private function ensureAvailabilityLink(Model $material, StoreLocation $location): void
+    {
+        if (! $material->getKey()) {
+            return;
+        }
+
+        StoreMaterialAvailability::query()->firstOrCreate([
+            'store_location_id' => $location->id,
+            'materialable_type' => $material::class,
+            'materialable_id' => (int) $material->getKey(),
+        ]);
     }
 }

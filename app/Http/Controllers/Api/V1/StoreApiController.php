@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Store;
 use App\Models\StoreLocation;
 use App\Services\Store\StoreMaterialSnapshotSynchronizer;
+use App\Support\Supply\SupplyMaterialRegistry;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -37,9 +38,13 @@ class StoreApiController extends Controller
         $validated = $validator->validated();
         $query = Store::query()
             ->with([
-                'locations' => fn ($query) => $query->withCount('materialAvailabilities')->orderBy('id'),
+                'locations' => fn ($query) => $query
+                    ->withCount('materialAvailabilities')
+                    ->withCount($this->resolvedMaterialAvailabilityLocationCountDefinition())
+                    ->orderBy('id'),
             ])
-            ->withCount(['locations', 'materialAvailabilities']);
+            ->withCount(['locations', 'materialAvailabilities'])
+            ->withCount($this->resolvedMaterialAvailabilityStoreCountDefinition());
 
         if (! empty($validated['search'])) {
             $search = $validated['search'];
@@ -95,8 +100,14 @@ class StoreApiController extends Controller
     public function show(int $id): JsonResponse
     {
         $store = Store::query()
-            ->with(['locations' => fn ($query) => $query->withCount('materialAvailabilities')->orderBy('id')])
+            ->with([
+                'locations' => fn ($query) => $query
+                    ->withCount('materialAvailabilities')
+                    ->withCount($this->resolvedMaterialAvailabilityLocationCountDefinition())
+                    ->orderBy('id'),
+            ])
             ->withCount(['locations', 'materialAvailabilities'])
+            ->withCount($this->resolvedMaterialAvailabilityStoreCountDefinition())
             ->find($id);
 
         if (! $store) {
@@ -201,7 +212,7 @@ class StoreApiController extends Controller
             'id' => $store->id,
             'name' => $store->name,
             'location_count' => (int) ($store->locations_count ?? $store->locations()->count()),
-            'material_availability_count' => (int) ($store->material_availabilities_count ?? $store->materialAvailabilities()->count()),
+            'material_availability_count' => (int) ($store->resolved_material_availabilities_count ?? $store->material_availabilities_count ?? $store->materialAvailabilities()->count()),
             'created_at' => $store->created_at?->toJSON(),
             'updated_at' => $store->updated_at?->toJSON(),
         ];
@@ -282,7 +293,31 @@ class StoreApiController extends Controller
             'formatted_address' => $location->formatted_address,
             'contact_name' => $location->contact_name,
             'contact_phone' => $location->contact_phone,
-            'material_availabilities_count' => (int) ($location->material_availabilities_count ?? 0),
+            'material_availabilities_count' => (int) ($location->resolved_material_availabilities_count ?? $location->material_availabilities_count ?? 0),
+        ];
+    }
+
+    /**
+     * @return array<string, \Closure>
+     */
+    private function resolvedMaterialAvailabilityStoreCountDefinition(): array
+    {
+        $models = array_values(SupplyMaterialRegistry::models());
+
+        return [
+            'materialAvailabilities as resolved_material_availabilities_count' => fn ($query) => $query->whereHasMorph('materialable', $models),
+        ];
+    }
+
+    /**
+     * @return array<string, \Closure>
+     */
+    private function resolvedMaterialAvailabilityLocationCountDefinition(): array
+    {
+        $models = array_values(SupplyMaterialRegistry::models());
+
+        return [
+            'materialAvailabilities as resolved_material_availabilities_count' => fn ($query) => $query->whereHasMorph('materialable', $models),
         ];
     }
 

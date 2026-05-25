@@ -5,6 +5,7 @@ use App\Models\Cement;
 use App\Models\MaterialSetting;
 use App\Models\Store;
 use App\Models\StoreLocation;
+use App\Models\StoreMaterialAvailability;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
@@ -93,6 +94,41 @@ test('updating a store location syncs linked material snapshots', function () {
         ->and($brick->store)->toBe('TB Material Sync');
 });
 
+test('updating a store location recreates missing availability links for linked materials', function () {
+    $store = Store::factory()->create([
+        'name' => 'TB Heal Availability',
+    ]);
+    $location = StoreLocation::factory()->create([
+        'store_id' => $store->id,
+        'address' => 'Jl. Heal Lama',
+    ]);
+    $brick = Brick::factory()->create([
+        'store' => $store->name,
+        'address' => 'Jl. Heal Lama',
+        'store_location_id' => $location->id,
+    ]);
+
+    StoreMaterialAvailability::query()
+        ->where('store_location_id', $location->id)
+        ->where('materialable_type', Brick::class)
+        ->where('materialable_id', $brick->id)
+        ->delete();
+
+    $this->withHeaders(trustedLocationHeaders())
+        ->putJson("/api/v1/stores/{$store->id}/locations/{$location->id}", [
+            'address' => 'Jl. Heal Baru',
+            'city' => 'Bogor',
+            'province' => 'Jawa Barat',
+        ])
+        ->assertOk();
+
+    expect(StoreMaterialAvailability::query()
+        ->where('store_location_id', $location->id)
+        ->where('materialable_type', Brick::class)
+        ->where('materialable_id', $brick->id)
+        ->exists())->toBeTrue();
+});
+
 test('store location materials endpoint returns grouped material availability ordered by settings', function () {
     MaterialSetting::query()->updateOrCreate(
         ['material_type' => 'brick'],
@@ -129,6 +165,34 @@ test('store location materials endpoint returns grouped material availability or
         ->assertJsonPath('data.0.items.0.label', 'Cement Bravo Portland')
         ->assertJsonPath('data.1.type', 'brick')
         ->assertJsonPath('data.1.items.0.label', 'Brick Alpha Roster');
+});
+
+test('store location endpoints ignore orphan availability rows in material counts', function () {
+    $store = Store::factory()->create();
+    $location = StoreLocation::factory()->create([
+        'store_id' => $store->id,
+        'address' => 'Jl. Hitung Valid',
+    ]);
+
+    $brick = Brick::factory()->create([
+        'store_location_id' => $location->id,
+    ]);
+
+    StoreMaterialAvailability::query()->create([
+        'store_location_id' => $location->id,
+        'materialable_type' => Brick::class,
+        'materialable_id' => 999999,
+    ]);
+
+    $this->withHeaders(trustedLocationHeaders())
+        ->getJson("/api/v1/stores/{$store->id}/locations")
+        ->assertOk()
+        ->assertJsonPath('data.0.material_availabilities_count', 1);
+
+    $this->withHeaders(trustedLocationHeaders())
+        ->getJson("/api/v1/stores/{$store->id}/locations/{$location->id}")
+        ->assertOk()
+        ->assertJsonPath('data.material_availabilities_count', 1);
 });
 
 function trustedLocationHeaders(): array

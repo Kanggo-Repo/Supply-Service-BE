@@ -3,6 +3,7 @@
 use App\Models\Brick;
 use App\Models\Store;
 use App\Models\StoreLocation;
+use App\Models\StoreMaterialAvailability;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
@@ -100,6 +101,48 @@ test('stores api search matches location fields on index payload', function (): 
         ->assertOk()
         ->assertJsonCount(1, 'data')
         ->assertJsonPath('data.0.id', $store->id);
+});
+
+test('stores api ignores orphan material availability rows in summary counts', function (): void {
+    $store = Store::factory()->create([
+        'name' => 'TC. Sinar Jaya 2',
+    ]);
+
+    $location = StoreLocation::factory()->create([
+        'store_id' => $store->id,
+        'address' => 'Medang, Pagedangan, Tangerang Regency, Banten, Indonesia',
+    ]);
+
+    $brickA = Brick::factory()->create([
+        'store' => $store->name,
+        'address' => $location->address,
+        'store_location_id' => $location->id,
+    ]);
+
+    $brickB = Brick::factory()->create([
+        'store' => $store->name,
+        'address' => $location->address,
+        'store_location_id' => $location->id,
+    ]);
+
+    StoreMaterialAvailability::query()->create([
+        'store_location_id' => $location->id,
+        'materialable_type' => Brick::class,
+        'materialable_id' => 999999,
+    ]);
+
+    $this->withHeaders(trustedStoreSummaryHeaders())
+        ->getJson("/api/v1/stores/{$store->id}")
+        ->assertOk()
+        ->assertJsonPath('data.material_availability_count', 2)
+        ->assertJsonPath('data.locations.0.material_availabilities_count', 2);
+
+    $this->withHeaders(trustedStoreSummaryHeaders())
+        ->getJson('/api/v1/stores?search=Sinar Jaya')
+        ->assertOk()
+        ->assertJsonPath('data.0.material_availability_count', 2)
+        ->assertJsonPath('data.0.resolved_material_count', 2)
+        ->assertJsonPath('data.0.locations.0.material_availabilities_count', 2);
 });
 
 function trustedStoreSummaryHeaders(): array
