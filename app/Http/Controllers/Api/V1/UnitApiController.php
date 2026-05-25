@@ -21,8 +21,28 @@ class UnitApiController extends Controller
             'sort_direction' => $request->input('sort_direction'),
         ];
 
+        $all = filter_var($request->input('all', false), FILTER_VALIDATE_BOOLEAN);
         $perPage = (int) $request->input('per_page', 20);
-        $perPage = $perPage > 0 && $perPage <= 100 ? $perPage : 20;
+        $perPage = $perPage > 0 ? $perPage : 20;
+
+        if ($all) {
+            $units = $this->repository->getAllUnits($filters);
+            $total = $units->count();
+
+            return response()->json([
+                'success' => true,
+                'data' => $units
+                    ->map(fn ($unit): array => $this->serializeUnit($unit))
+                    ->values()
+                    ->all(),
+                'pagination' => [
+                    'current_page' => 1,
+                    'per_page' => $total,
+                    'total' => $total,
+                    'last_page' => 1,
+                ],
+            ]);
+        }
 
         $units = $this->repository->getUnits($filters, $perPage);
 

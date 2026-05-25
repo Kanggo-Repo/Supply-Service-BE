@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Unit;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 
 class UnitRepository
@@ -11,7 +12,21 @@ class UnitRepository
     public function getUnits(array $filters = [], int $perPage = 20): LengthAwarePaginator
     {
         $query = Unit::query()->with('materialTypes');
+        $query = $this->applyUnitFilters($query, $filters);
 
+        return $query->paginate($perPage);
+    }
+
+    public function getAllUnits(array $filters = []): Collection
+    {
+        $query = Unit::query()->with('materialTypes');
+        $query = $this->applyUnitFilters($query, $filters);
+
+        return $query->get();
+    }
+
+    private function applyUnitFilters($query, array $filters)
+    {
         if (! empty($filters['material_type'])) {
             $query->forMaterial($filters['material_type']);
         }
@@ -24,7 +39,7 @@ class UnitRepository
             ? ($filters['sort_direction'] ?? 'asc')
             : 'asc';
 
-        return $query->orderBy($sortBy, $sortDirection)->paginate($perPage);
+        return $query->orderBy($sortBy, $sortDirection);
     }
 
     public function findUnit(int $id): ?Unit

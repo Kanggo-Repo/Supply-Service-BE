@@ -2,6 +2,7 @@
 
 use App\Models\Brick;
 use App\Models\Cement;
+use App\Models\Nat;
 use App\Models\StoreLocation;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -93,6 +94,27 @@ test('material catalog endpoints support family list detail create update and de
     $this->assertSoftDeleted('bricks', [
         'id' => $createdId,
     ]);
+});
+
+test('material catalog summary returns family and display totals', function (): void {
+    Brick::factory()->count(2)->create();
+    Cement::factory()->count(3)->create();
+    collect(range(1, 4))->each(fn (int $index) => Nat::query()->create([
+        'nat_name' => "Nat {$index}",
+        'brand' => "Brand {$index}",
+        'type' => 'Nat',
+    ]));
+
+    $response = $this
+        ->withHeaders(trustedCatalogHeaders())
+        ->getJson('/api/v1/materials/summary');
+
+    $response->assertOk()
+        ->assertJsonPath('data.families.brick', 2)
+        ->assertJsonPath('data.families.cement', 3)
+        ->assertJsonPath('data.families.nat', 4)
+        ->assertJsonPath('data.display_families.cement', 7)
+        ->assertJsonPath('data.grand_total', 9);
 });
 
 test('material catalog create and update reject unknown attributes', function (): void {

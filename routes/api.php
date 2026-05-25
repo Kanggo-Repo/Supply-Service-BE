@@ -28,6 +28,7 @@ Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1/reference')->
 });
 
 Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1')->group(function (): void {
+    Route::get('/materials/summary', [MaterialCatalogApiController::class, 'summary']);
     Route::get('/materials/recycle-bin', [MaterialRecycleBinApiController::class, 'index']);
     Route::post('/materials/recycle-bin/{family}/{id}/restore', [MaterialRecycleBinApiController::class, 'restore'])
         ->whereNumber('id');

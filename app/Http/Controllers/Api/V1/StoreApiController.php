@@ -20,8 +20,9 @@ class StoreApiController extends Controller
     public function index(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
+            'all' => ['nullable', 'boolean'],
             'search' => ['nullable', 'string', 'max:255'],
-            'perPage' => ['nullable', 'integer', 'min:1', 'max:100'],
+            'perPage' => ['nullable', 'integer', 'min:1'],
             'sortBy' => ['nullable', 'string', Rule::in(['id', 'name'])],
             'sortDirection' => ['nullable', 'string', Rule::in(['asc', 'desc'])],
         ]);
@@ -34,19 +35,54 @@ class StoreApiController extends Controller
         }
 
         $validated = $validator->validated();
-        $query = Store::query()->withCount(['locations', 'materialAvailabilities']);
+        $query = Store::query()
+            ->with([
+                'locations' => fn ($query) => $query->withCount('materialAvailabilities')->orderBy('id'),
+            ])
+            ->withCount(['locations', 'materialAvailabilities']);
 
         if (! empty($validated['search'])) {
-            $query->where('name', 'like', '%'.$validated['search'].'%');
+            $search = $validated['search'];
+
+            $query->where(function ($builder) use ($search): void {
+                $builder->where('name', 'like', '%'.$search.'%')
+                    ->orWhereHas('locations', function ($locationQuery) use ($search): void {
+                        $locationQuery
+                            ->where('address', 'like', '%'.$search.'%')
+                            ->orWhere('district', 'like', '%'.$search.'%')
+                            ->orWhere('city', 'like', '%'.$search.'%')
+                            ->orWhere('province', 'like', '%'.$search.'%')
+                            ->orWhere('formatted_address', 'like', '%'.$search.'%')
+                            ->orWhere('contact_name', 'like', '%'.$search.'%')
+                            ->orWhere('contact_phone', 'like', '%'.$search.'%');
+                    });
+            });
         }
 
-        $stores = $query
-            ->orderBy($validated['sortBy'] ?? 'name', $validated['sortDirection'] ?? 'asc')
-            ->paginate((int) ($validated['perPage'] ?? 25));
+        $query->orderBy($validated['sortBy'] ?? 'name', $validated['sortDirection'] ?? 'asc');
+
+        $all = filter_var($validated['all'] ?? false, FILTER_VALIDATE_BOOLEAN);
+        if ($all) {
+            $stores = $query->get();
+            $total = $stores->count();
+
+            return response()->json([
+                'data' => $stores
+                    ->map(fn (Store $store): array => $this->serializeStoreIndex($store))
+                    ->values()
+                    ->all(),
+                'current_page' => 1,
+                'per_page' => $total,
+                'total' => $total,
+                'last_page' => 1,
+            ]);
+        }
+
+        $stores = $query->paginate((int) ($validated['perPage'] ?? 25));
 
         return response()->json([
             'data' => collect($stores->items())
-                ->map(fn (Store $store): array => $this->serializeStore($store))
+                ->map(fn (Store $store): array => $this->serializeStoreIndex($store))
                 ->values()
                 ->all(),
             'current_page' => $stores->currentPage(),
@@ -174,16 +210,131 @@ class StoreApiController extends Controller
     /**
      * @return array<string, mixed>
      */
+    private function serializeStoreIndex(Store $store): array
+    {
+        $locations = $store->locations
+            ->map(fn (StoreLocation $location): array => $this->serializeLocation($location))
+            ->values();
+
+        $visibleLocations = $locations
+            ->groupBy(fn (array $location): string => $this->locationDedupKey($location))
+            ->map(function ($group): ?array {
+                $primaryLocation = collect($group)
+                    ->sort(function (array $left, array $right): int {
+                        $scoreCompare = $this->locationQualityScore($right) <=> $this->locationQualityScore($left);
+
+                        if ($scoreCompare !== 0) {
+                            return $scoreCompare;
+                        }
+
+                        return ((int) ($left['id'] ?? 0)) <=> ((int) ($right['id'] ?? 0));
+                    })
+                    ->first();
+
+                if (! is_array($primaryLocation)) {
+                    return null;
+                }
+
+                $primaryLocation['resolved_material_count'] = collect($group)
+                    ->sum(fn (array $location): int => (int) ($location['material_availabilities_count'] ?? 0));
+                $primaryLocation['deduped_location_ids'] = collect($group)
+                    ->map(fn (array $location): int => (int) ($location['id'] ?? 0))
+                    ->values()
+                    ->all();
+                $primaryLocation['has_missing_map_coordinates'] = ! $this->locationHasCoordinates($primaryLocation);
+
+                return $primaryLocation;
+            })
+            ->filter()
+            ->values();
+
+        $missingMapBranchCount = $visibleLocations
+            ->filter(fn (array $location): bool => (bool) ($location['has_missing_map_coordinates'] ?? false))
+            ->count();
+
+        return [
+            ...$this->serializeStore($store),
+            'locations' => $locations->all(),
+            'primary_location' => $visibleLocations->first(),
+            'resolved_material_count' => $visibleLocations->sum('resolved_material_count'),
+            'resolved_branch_count' => $visibleLocations->count(),
+            'missing_map_branch_count' => $missingMapBranchCount,
+            'has_missing_map_coordinates' => $visibleLocations->isEmpty() || $missingMapBranchCount > 0,
+        ];
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
     private function serializeLocation(StoreLocation $location): array
     {
         return [
             'id' => $location->id,
             'store_id' => $location->store_id,
             'address' => $location->address,
+            'district' => $location->district,
             'resolved_address' => $location->resolved_address,
             'city' => $location->city,
             'province' => $location->province,
+            'latitude' => $location->latitude,
+            'longitude' => $location->longitude,
+            'place_id' => $location->place_id,
+            'formatted_address' => $location->formatted_address,
+            'contact_name' => $location->contact_name,
+            'contact_phone' => $location->contact_phone,
             'material_availabilities_count' => (int) ($location->material_availabilities_count ?? 0),
         ];
+    }
+
+    /**
+     * @param  array<string, mixed>  $location
+     */
+    private function locationDedupKey(array $location): string
+    {
+        $placeId = strtolower(trim((string) ($location['place_id'] ?? '')));
+        if ($placeId !== '') {
+            return 'place:'.$placeId;
+        }
+
+        $resolvedAddress = strtolower(trim((string) ($location['resolved_address'] ?? '')));
+        if ($resolvedAddress !== '') {
+            return 'address:'.preg_replace('/\s+/', ' ', $resolvedAddress);
+        }
+
+        return 'id:'.(int) ($location['id'] ?? 0);
+    }
+
+    /**
+     * @param  array<string, mixed>  $location
+     */
+    private function locationQualityScore(array $location): int
+    {
+        $score = 0;
+
+        if (filled($location['formatted_address'] ?? null)) {
+            $score += 4;
+        }
+        if (filled($location['address'] ?? null)) {
+            $score += 1;
+        }
+        if (filled($location['city'] ?? null)) {
+            $score += 2;
+        }
+        if (filled($location['province'] ?? null)) {
+            $score += 1;
+        }
+        if ($this->locationHasCoordinates($location)) {
+            $score += 3;
+        }
+
+        return $score;
+    }
+
+    /**
+     * @param  array<string, mixed>  $location
+     */
+    private function locationHasCoordinates(array $location): bool
+    {
+        return is_numeric($location['latitude'] ?? null) && is_numeric($location['longitude'] ?? null);
     }
 }

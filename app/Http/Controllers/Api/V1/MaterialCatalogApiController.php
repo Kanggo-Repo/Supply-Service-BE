@@ -16,6 +16,31 @@ use Illuminate\Validation\Rule;
 
 class MaterialCatalogApiController extends Controller
 {
+    public function summary(): JsonResponse
+    {
+        $familyCounts = collect(SupplyMaterialRegistry::families())
+            ->mapWithKeys(function (string $family): array {
+                $modelClass = SupplyMaterialRegistry::modelForFamily($family);
+
+                return [
+                    $family => $modelClass ? $modelClass::query()->count() : 0,
+                ];
+            })
+            ->all();
+
+        $displayCounts = $familyCounts;
+        $displayCounts['cement'] = (int) ($familyCounts['cement'] ?? 0) + (int) ($familyCounts['nat'] ?? 0);
+        unset($displayCounts['nat']);
+
+        return response()->json([
+            'data' => [
+                'families' => $familyCounts,
+                'display_families' => $displayCounts,
+                'grand_total' => array_sum($displayCounts),
+            ],
+        ]);
+    }
+
     public function index(Request $request, string $family): JsonResponse
     {
         $normalizedFamily = SupplyMaterialRegistry::normalizeFamily($family);
@@ -31,8 +56,9 @@ class MaterialCatalogApiController extends Controller
             : ($allowedSortColumns[0] ?? 'id');
 
         $validator = Validator::make($request->all(), [
+            'all' => ['nullable', 'boolean'],
             'search' => ['nullable', 'string', 'max:255'],
-            'perPage' => ['nullable', 'integer', 'min:1', 'max:100'],
+            'perPage' => ['nullable', 'integer', 'min:1'],
             'sortBy' => ['nullable', 'string', Rule::in($allowedSortColumns)],
             'sortDirection' => ['nullable', 'string', Rule::in(['asc', 'desc'])],
             'letter' => ['nullable', 'string', 'size:1', 'regex:/^[A-Za-z]$/'],
@@ -52,9 +78,9 @@ class MaterialCatalogApiController extends Controller
             $search = $validated['search'];
             $searchColumns = array_values(array_filter([
                 SupplyMaterialRegistry::nameField($normalizedFamily),
-                Schema::hasColumn((new $modelClass())->getTable(), 'brand') ? 'brand' : null,
-                Schema::hasColumn((new $modelClass())->getTable(), 'type') ? 'type' : null,
-                Schema::hasColumn((new $modelClass())->getTable(), 'sub_brand') ? 'sub_brand' : null,
+                Schema::hasColumn((new $modelClass)->getTable(), 'brand') ? 'brand' : null,
+                Schema::hasColumn((new $modelClass)->getTable(), 'type') ? 'type' : null,
+                Schema::hasColumn((new $modelClass)->getTable(), 'sub_brand') ? 'sub_brand' : null,
             ]));
 
             $query->where(function ($builder) use ($search, $searchColumns): void {
@@ -64,17 +90,33 @@ class MaterialCatalogApiController extends Controller
             });
         }
 
-        if (! empty($validated['letter']) && Schema::hasColumn((new $modelClass())->getTable(), 'brand')) {
+        if (! empty($validated['letter']) && Schema::hasColumn((new $modelClass)->getTable(), 'brand')) {
             $query->where('brand', 'like', strtoupper($validated['letter']).'%');
         }
 
         $sortBy = $validated['sortBy'] ?? $defaultSortBy;
         $sortDirection = $validated['sortDirection'] ?? 'asc';
         $perPage = (int) ($validated['perPage'] ?? 25);
+        $query->orderBy($sortBy, $sortDirection);
 
-        $materials = $query
-            ->orderBy($sortBy, $sortDirection)
-            ->paginate($perPage);
+        $all = filter_var($validated['all'] ?? false, FILTER_VALIDATE_BOOLEAN);
+        if ($all) {
+            $materials = $query->get();
+            $total = $materials->count();
+
+            return response()->json([
+                'data' => $materials
+                    ->map(fn (Model $material): array => $this->serializeMaterial($normalizedFamily, $material))
+                    ->values()
+                    ->all(),
+                'current_page' => 1,
+                'per_page' => $total,
+                'total' => $total,
+                'last_page' => 1,
+            ]);
+        }
+
+        $materials = $query->paginate($perPage);
 
         return response()->json([
             'data' => collect($materials->items())
@@ -245,7 +287,7 @@ class MaterialCatalogApiController extends Controller
      */
     private function allowedSortColumns(string $modelClass): array
     {
-        $table = (new $modelClass())->getTable();
+        $table = (new $modelClass)->getTable();
         $columns = array_map('strtolower', Schema::getColumnListing($table));
         sort($columns);
 
