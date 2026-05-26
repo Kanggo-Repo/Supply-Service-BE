@@ -1,7 +1,9 @@
 <?php
 
 use App\Models\Brick;
+use App\Models\BrickInstallationType;
 use App\Models\Cement;
+use App\Models\MortarFormula;
 use App\Models\Store;
 use App\Models\StoreLocation;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -193,6 +195,107 @@ test('location availability endpoints return serialized materials for single and
     $bulkResponse->assertOk()
         ->assertJsonPath('data.0.location_id', $location->id)
         ->assertJsonCount(2, 'data.0.materials');
+});
+
+test('brick installation types reference returns active types ordered for calculation consumers', function () {
+    BrickInstallationType::query()->create([
+        'name' => '1 Bata',
+        'code' => 'one',
+        'description' => 'Posisi tidur horizontal.',
+        'mortar_volume_per_m2' => 0.045,
+        'waste_factor' => 1.5,
+        'visible_side_width' => 'width',
+        'visible_side_height' => 'height',
+        'orientation' => 'horizontal_lying',
+        'bricks_per_sqm' => 72.5,
+        'is_active' => true,
+        'display_order' => 2,
+    ]);
+
+    BrickInstallationType::query()->create([
+        'name' => '1/2 Bata',
+        'code' => 'half',
+        'description' => 'Posisi tidur horizontal.',
+        'mortar_volume_per_m2' => 0.032,
+        'waste_factor' => 1.727273,
+        'visible_side_width' => 'length',
+        'visible_side_height' => 'height',
+        'orientation' => 'horizontal_lying',
+        'bricks_per_sqm' => 90.5,
+        'is_active' => true,
+        'display_order' => 1,
+    ]);
+
+    BrickInstallationType::query()->create([
+        'name' => 'Arsip',
+        'code' => 'archived',
+        'visible_side_width' => 'length',
+        'visible_side_height' => 'height',
+        'orientation' => 'horizontal_lying',
+        'is_active' => false,
+        'display_order' => 0,
+    ]);
+
+    $response = $this
+        ->withHeaders(trustedCallerHeaders())
+        ->getJson('/api/v1/reference/brick-installation-types');
+
+    $response->assertOk()
+        ->assertJsonCount(2, 'data')
+        ->assertJsonPath('data.0.code', 'half')
+        ->assertJsonPath('data.0.bricks_per_sqm', 90.5)
+        ->assertJsonPath('data.1.code', 'one');
+});
+
+test('mortar formulas reference returns active formulas ordered by default then name', function () {
+    MortarFormula::query()->create([
+        'name' => 'Adukan 1:5',
+        'description' => 'Non-struktural',
+        'cement_ratio' => 1,
+        'sand_ratio' => 5,
+        'water_ratio' => 0.3,
+        'cement_kg_per_m3' => 275,
+        'sand_m3_per_m3' => 0.89,
+        'water_liter_per_m3' => 400,
+        'expansion_factor' => 0.15,
+        'cement_bag_type' => 'both',
+        'is_default' => false,
+        'is_active' => true,
+    ]);
+
+    MortarFormula::query()->create([
+        'name' => 'Adukan 1:4 (Standar)',
+        'description' => 'Struktural',
+        'cement_ratio' => 1,
+        'sand_ratio' => 4,
+        'water_ratio' => 0.3,
+        'cement_kg_per_m3' => 321.97,
+        'sand_m3_per_m3' => 0.8688,
+        'water_liter_per_m3' => 347.73,
+        'expansion_factor' => 0.15,
+        'cement_bag_type' => 'both',
+        'is_default' => true,
+        'is_active' => true,
+    ]);
+
+    MortarFormula::query()->create([
+        'name' => 'Arsip',
+        'cement_ratio' => 1,
+        'sand_ratio' => 6,
+        'cement_bag_type' => 'both',
+        'is_default' => false,
+        'is_active' => false,
+    ]);
+
+    $response = $this
+        ->withHeaders(trustedCallerHeaders())
+        ->getJson('/api/v1/reference/mortar-formulas');
+
+    $response->assertOk()
+        ->assertJsonCount(2, 'data')
+        ->assertJsonPath('data.0.name', 'Adukan 1:4 (Standar)')
+        ->assertJsonPath('data.0.is_default', true)
+        ->assertJsonPath('data.1.name', 'Adukan 1:5');
 });
 
 function trustedCallerHeaders(): array

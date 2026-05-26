@@ -25,6 +25,8 @@ Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1/reference')->
     Route::post('/locations/availability/bulk', [SupplyReferenceController::class, 'bulkLocationAvailability']);
     Route::get('/locations/{locationId}/availability', [SupplyReferenceController::class, 'locationAvailability'])
         ->whereNumber('locationId');
+    Route::get('/brick-installation-types', [SupplyReferenceController::class, 'brickInstallationTypes']);
+    Route::get('/mortar-formulas', [SupplyReferenceController::class, 'mortarFormulas']);
 });
 
 Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1')->group(function (): void {

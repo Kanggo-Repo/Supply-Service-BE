@@ -3,16 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brick;
-use App\Models\Cat;
-use App\Models\Cement;
-use App\Models\Ceramic;
-use App\Models\KasaGypsum;
-use App\Models\Nat;
-use App\Models\Paku;
-use App\Models\PakuTembak;
-use App\Models\Sand;
-use App\Models\Steel;
+use App\Models\BrickInstallationType;
+use App\Models\MortarFormula;
 use App\Models\Store;
 use App\Models\StoreLocation;
 use App\Support\Supply\SupplyMaterialLabelResolver;
@@ -99,7 +91,7 @@ class SupplyReferenceController extends Controller
 
         $family = $validated['family'];
         $modelClass = $this->materialModels()[$family];
-        $table = (new $modelClass())->getTable();
+        $table = (new $modelClass)->getTable();
 
         $fields = collect($validated['fields'])
             ->filter(fn (string $field): bool => Schema::hasColumn($table, $field))
@@ -239,6 +231,63 @@ class SupplyReferenceController extends Controller
 
         return response()->json([
             'data' => $locations,
+        ]);
+    }
+
+    public function brickInstallationTypes(): JsonResponse
+    {
+        $types = BrickInstallationType::query()
+            ->where('is_active', true)
+            ->orderBy('display_order')
+            ->orderBy('name')
+            ->get()
+            ->map(fn (BrickInstallationType $type): array => [
+                'id' => $type->id,
+                'name' => $type->name,
+                'code' => $type->code,
+                'description' => $type->description,
+                'mortar_volume_per_m2' => $this->numericOrNull($type->mortar_volume_per_m2),
+                'waste_factor' => $this->numericOrNull($type->waste_factor),
+                'visible_side_width' => $type->visible_side_width,
+                'visible_side_height' => $type->visible_side_height,
+                'orientation' => $type->orientation,
+                'bricks_per_sqm' => $this->numericOrNull($type->bricks_per_sqm),
+                'is_active' => (bool) $type->is_active,
+                'display_order' => $type->display_order,
+            ])
+            ->values();
+
+        return response()->json([
+            'data' => $types,
+        ]);
+    }
+
+    public function mortarFormulas(): JsonResponse
+    {
+        $formulas = MortarFormula::query()
+            ->where('is_active', true)
+            ->orderByDesc('is_default')
+            ->orderBy('name')
+            ->get()
+            ->map(fn (MortarFormula $formula): array => [
+                'id' => $formula->id,
+                'name' => $formula->name,
+                'description' => $formula->description,
+                'cement_ratio' => $this->numericOrNull($formula->cement_ratio),
+                'sand_ratio' => $this->numericOrNull($formula->sand_ratio),
+                'water_ratio' => $this->numericOrNull($formula->water_ratio),
+                'cement_kg_per_m3' => $this->numericOrNull($formula->cement_kg_per_m3),
+                'sand_m3_per_m3' => $this->numericOrNull($formula->sand_m3_per_m3),
+                'water_liter_per_m3' => $this->numericOrNull($formula->water_liter_per_m3),
+                'expansion_factor' => $this->numericOrNull($formula->expansion_factor),
+                'cement_bag_type' => $formula->cement_bag_type,
+                'is_default' => (bool) $formula->is_default,
+                'is_active' => (bool) $formula->is_active,
+            ])
+            ->values();
+
+        return response()->json([
+            'data' => $formulas,
         ]);
     }
 
