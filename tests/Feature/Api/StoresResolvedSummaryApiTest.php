@@ -145,6 +145,37 @@ test('stores api ignores orphan material availability rows in summary counts', f
         ->assertJsonPath('data.0.locations.0.material_availabilities_count', 2);
 });
 
+test('stores sidebar summary counts stores with missing map coordinates like monolith', function (): void {
+    $storeWithoutLocation = Store::factory()->create([
+        'name' => 'TB. Tanpa Lokasi',
+    ]);
+
+    $storeWithoutCoordinates = Store::factory()->create([
+        'name' => 'TB. Koordinat Kosong',
+    ]);
+
+    StoreLocation::factory()->create([
+        'store_id' => $storeWithoutCoordinates->id,
+        'latitude' => null,
+        'longitude' => null,
+    ]);
+
+    $storeComplete = Store::factory()->create([
+        'name' => 'TB. Lengkap',
+    ]);
+
+    StoreLocation::factory()->create([
+        'store_id' => $storeComplete->id,
+        'latitude' => -6.2,
+        'longitude' => 106.8,
+    ]);
+
+    $this->withHeaders(trustedStoreSummaryHeaders())
+        ->getJson('/api/v1/stores/sidebar-summary')
+        ->assertOk()
+        ->assertJsonPath('data.stores_missing_map_count', 2);
+});
+
 function trustedStoreSummaryHeaders(): array
 {
     return [

@@ -97,6 +97,27 @@ class StoreApiController extends Controller
         ]);
     }
 
+    public function sidebarSummary(): JsonResponse
+    {
+        $missingMapCount = Store::query()
+            ->where(function ($query): void {
+                $query->whereDoesntHave('locations')
+                    ->orWhereHas('locations', function ($locationQuery): void {
+                        $locationQuery
+                            ->whereNull('latitude')
+                            ->orWhereNull('longitude');
+                    });
+            })
+            ->distinct('stores.id')
+            ->count('stores.id');
+
+        return response()->json([
+            'data' => [
+                'stores_missing_map_count' => $missingMapCount,
+            ],
+        ]);
+    }
+
     public function show(int $id): JsonResponse
     {
         $store = Store::query()

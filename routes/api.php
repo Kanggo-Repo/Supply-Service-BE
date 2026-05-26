@@ -82,6 +82,7 @@ Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1')->group(func
     Route::get('/stores/{id}', [StoreApiController::class, 'show'])->whereNumber('id');
     Route::put('/stores/{id}', [StoreApiController::class, 'update'])->whereNumber('id');
     Route::delete('/stores/{id}', [StoreApiController::class, 'destroy'])->whereNumber('id');
+    Route::get('/stores/sidebar-summary', [StoreApiController::class, 'sidebarSummary']);
     Route::get('/stores', [StoreApiController::class, 'index']);
     Route::post('/stores', [StoreApiController::class, 'store']);
 

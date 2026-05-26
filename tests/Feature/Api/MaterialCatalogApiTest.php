@@ -97,7 +97,12 @@ test('material catalog endpoints support family list detail create update and de
 });
 
 test('material catalog summary returns family and display totals', function (): void {
-    Brick::factory()->count(2)->create();
+    Brick::factory()->create([
+        'brand' => 'Alpha Brick',
+    ]);
+    Brick::factory()->create([
+        'brand' => 'Charlie Brick',
+    ]);
     Cement::factory()->count(3)->create();
     collect(range(1, 4))->each(fn (int $index) => Nat::query()->create([
         'nat_name' => "Nat {$index}",
@@ -113,6 +118,9 @@ test('material catalog summary returns family and display totals', function (): 
         ->assertJsonPath('data.families.brick', 2)
         ->assertJsonPath('data.families.cement', 3)
         ->assertJsonPath('data.families.nat', 4)
+        ->assertJsonPath('data.family_letters.brick.0', 'A')
+        ->assertJsonPath('data.family_letters.brick.1', 'C')
+        ->assertJsonPath('data.display_letters.cement.0', 'B')
         ->assertJsonPath('data.display_families.cement', 7)
         ->assertJsonPath('data.grand_total', 9);
 });
@@ -138,6 +146,45 @@ test('material catalog create and update reject unknown attributes', function ()
 
     $updateResponse->assertUnprocessable()
         ->assertJsonValidationErrors(['deleted_by']);
+});
+
+test('material catalog includes map warning metadata for missing store location links and coordinates', function (): void {
+    $locationWithoutCoordinates = StoreLocation::factory()->create([
+        'latitude' => null,
+        'longitude' => null,
+    ]);
+
+    $orphanLinkedBrick = Brick::factory()->create([
+        'brand' => 'Orphan Brick',
+        'type' => 'Roster',
+        'store' => 'TB. Orphan',
+        'store_location_id' => null,
+    ]);
+
+    $coordinateMissingBrick = Brick::factory()->create([
+        'brand' => 'Mapless Brick',
+        'type' => 'Press',
+        'store' => $locationWithoutCoordinates->store->name,
+        'store_location_id' => $locationWithoutCoordinates->id,
+    ]);
+
+    $this->withHeaders(trustedCatalogHeaders())
+        ->getJson("/api/v1/materials/brick/{$orphanLinkedBrick->id}")
+        ->assertOk()
+        ->assertJsonPath('data.has_missing_map_coordinates', true)
+        ->assertJsonPath('data.map_warning_label', 'WAJIB SET MAP')
+        ->assertJsonPath('data.map_warning_reason', 'Lokasi toko belum ditautkan ke database store.')
+        ->assertJsonPath('data.map_warning_action_context', 'store-search');
+
+    $this->withHeaders(trustedCatalogHeaders())
+        ->getJson("/api/v1/materials/brick/{$coordinateMissingBrick->id}")
+        ->assertOk()
+        ->assertJsonPath('data.has_missing_map_coordinates', true)
+        ->assertJsonPath('data.map_warning_label', 'WAJIB ISI TITIK MAP')
+        ->assertJsonPath('data.map_warning_reason', 'Koordinat Google Maps toko ini belum diisi.')
+        ->assertJsonPath('data.map_warning_action_context', 'store-location-edit')
+        ->assertJsonPath('data.map_warning_store_id', $locationWithoutCoordinates->store_id)
+        ->assertJsonPath('data.map_warning_store_location_id', $locationWithoutCoordinates->id);
 });
 
 function trustedCatalogHeaders(): array
