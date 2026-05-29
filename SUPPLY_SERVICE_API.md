@@ -41,8 +41,8 @@ Catatan:
 
 - trusted callers sekarang dibaca dari [config/supply_security.php](/C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/config/supply_security.php:1)
 - mapping default saat ini:
-  - `supply-fe` -> `SUPPLY_FE_SERVICE_TOKEN`
-  - `calculation-service-be` -> `CALCULATION_SERVICE_BE_TOKEN`
+  - `supply-fe` -> `SUPPLY_SERVICE_TOKEN`
+  - `calculation-service-be` -> `CALCULATION_SERVICE_TOKEN`
 
 ## Supported Families
 
@@ -578,7 +578,7 @@ Isi variable:
 
 - `base_url` = `http://127.0.0.1:8000`
 - `service_name` = `supply-fe`
-- `service_token` = isi token sesuai `SUPPLY_FE_SERVICE_TOKEN`
+- `service_token` = isi token sesuai `SUPPLY_SERVICE_TOKEN`
 - `actor_id` = `1`
 - `actor_name` = nama user uji
 - `actor_email` = email user uji
