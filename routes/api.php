@@ -9,9 +9,16 @@ use App\Http\Controllers\Api\V1\StoreApiController;
 use App\Http\Controllers\Api\V1\StoreLocationApiController;
 use App\Http\Controllers\Api\V1\StoreSearchApiController;
 use App\Http\Controllers\Api\V1\StoreSearchRadiusSettingsApiController;
+use App\Http\Controllers\Api\V1\SupplyHealthController;
 use App\Http\Controllers\Api\V1\SupplyReferenceController;
 use App\Http\Controllers\Api\V1\UnitApiController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Health\Http\Controllers\HealthCheckJsonResultsController;
+
+Route::prefix('v1')->group(function (): void {
+    Route::get('/health', SupplyHealthController::class);
+    Route::get('/health/json', HealthCheckJsonResultsController::class);
+});
 
 Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1/reference')->group(function (): void {
     Route::get('/materials', [SupplyReferenceController::class, 'materials']);
