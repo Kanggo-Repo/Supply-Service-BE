@@ -1,0 +1,397 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$full_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/AutoAssignMaterialsToStoreLocationsCommand.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$resolved_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/AutoAssignMaterialsToStoreLocationsCommand.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$store_location_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/AutoAssignMaterialsToStoreLocationsCommand.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/RegisterStoresFromMaterialsCommand.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>name" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Console/Commands/RegisterStoresFromMaterialsCommand.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/ResyncStoreLocationMaterialAddressesCommand.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/ResyncStoreLocationMaterialAddressesCommand.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$store\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/ResyncStoreLocationMaterialAddressesCommand.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>name" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Console/Commands/ResyncStoreLocationMaterialAddressesCommand.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,mixed\>\:\:map\(\) contains unresolvable type\.$#'
+			identifier: argument.unresolvableType
+			count: 1
+			path: app/Http/Controllers/Api/V1/DashboardSummaryApiController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,int\<0, max\>\>\:\:mapWithKeys\(\) expects callable\(int\<0, max\>, int\)\: array\<string, 0\>, Closure\(string\)\: non\-empty\-array\<string, 0\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialCatalogApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialHistoryApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialHistoryApiController.php
+
+		-
+			message: '#^Cannot call method toIso8601String\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialHistoryApiController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,App\\Models\\MaterialChangeLog\>\:\:map\(\) contains unresolvable type\.$#'
+			identifier: argument.unresolvableType
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialHistoryApiController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,string\>\:\:map\(\) expects callable\(string, int\)\: array\{field\: string, label\: string, from\: mixed, to\: mixed\}, Closure\(array, string\)\: array\{field\: string, label\: string, from\: mixed, to\: mixed\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialHistoryApiController.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type string\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialHistoryApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$deletedBy\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialRecycleBinApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$deleted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialRecycleBinApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$deleted_by\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/Api/V1/MaterialRecycleBinApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialRecycleBinApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialRecycleBinApiController.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:restore\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/MaterialRecycleBinApiController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$resolved_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreApiController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: array\<string, mixed\>, Closure\(App\\Models\\StoreLocation\)\: array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Http/Controllers/Api/V1/StoreApiController.php
+
+		-
+			message: '#^Parameter \#1 \$location of method App\\Services\\Store\\StoreMaterialSnapshotSynchronizer\:\:detachLocation\(\) expects App\\Models\\StoreLocation, Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreApiController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$resolved_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreLocationApiController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$materialable\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreLocationApiController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: array\<string, mixed\>, Closure\(App\\Models\\StoreLocation\)\: array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreLocationApiController.php
+
+		-
+			message: '#^Parameter \#1 \$location of method App\\Http\\Controllers\\Api\\V1\\StoreLocationApiController\:\:serializeLocation\(\) expects App\\Models\\StoreLocation, Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreLocationApiController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$full_address\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/Api/V1/StoreSearchApiController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$resolved_address\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/Api/V1/StoreSearchApiController.php
+
+		-
+			message: '#^Method App\\Http\\Controllers\\Api\\V1\\StoreSearchApiController\:\:preferredLocationsForAutocomplete\(\) should return Illuminate\\Support\\Collection\<int, App\\Models\\StoreLocation\> but returns Illuminate\\Database\\Eloquent\\Collection\<int, Illuminate\\Database\\Eloquent\\Model\>\.$#'
+			identifier: return.type
+			count: 2
+			path: app/Http/Controllers/Api/V1/StoreSearchApiController.php
+
+		-
+			message: '#^Offset 0 on non\-empty\-list\<string\> on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreSearchApiController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: array\{location\: App\\Models\\StoreLocation, score\: 0\|1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\}, Closure\(App\\Models\\StoreLocation\)\: array\{location\: App\\Models\\StoreLocation, score\: 0\|1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreSearchApiController.php
+
+		-
+			message: '#^Parameter \#2 \$location of method App\\Http\\Controllers\\Api\\V1\\StoreSearchApiController\:\:serializeLocation\(\) expects App\\Models\\StoreLocation, Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/StoreSearchApiController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$resolved_address\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Method App\\Http\\Controllers\\Api\\V1\\SupplyReferenceController\:\:serializeAvailabilityMaterials\(\) should return Illuminate\\Support\\Collection\<int, array\<string, mixed\>\> but returns Illuminate\\Support\\Collection\<int, array\{family\: string, material_id\: mixed, label\: string, brand\: mixed, type\: mixed, price\: float\|int\|null\}\>\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,App\\Models\\StoreLocation\>\:\:map\(\) contains unresolvable type\.$#'
+			identifier: argument.unresolvableType
+			count: 1
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) contains unresolvable type\.$#'
+			identifier: argument.unresolvableType
+			count: 1
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: array\{id\: int, store_id\: int\<0, max\>, address\: mixed, latitude\: float\|null, longitude\: float\|null, material_availabilities_count\: int\<0, max\>\}, Closure\(App\\Models\\StoreLocation\)\: array\{id\: int, store_id\: int\<0, max\>, address\: mixed, latitude\: float\|null, longitude\: float\|null, material_availabilities_count\: int\<0, max\>\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,array\<string, mixed\>\>\:\:sortBy\(\) contains unresolvable type\.$#'
+			identifier: argument.unresolvableType
+			count: 1
+			path: app/Http/Controllers/Api/V1/SupplyReferenceController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$full_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/StoreLocation.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$full_address\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$material_snapshot_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$resolved_address\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:trashed\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Method App\\Models\\SupplyMaterial\:\:createStoreLocationFromSnapshot\(\) should return App\\Models\\StoreLocation\|null but returns Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 3
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Method App\\Models\\SupplyMaterial\:\:createStoreLocationFromSnapshot\(\) should return App\\Models\\StoreLocation\|null but returns Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:first\(\) expects \(callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: bool\)\|null, Closure\(App\\Models\\StoreLocation\)\: bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Models/SupplyMaterial.php
+
+		-
+			message: '#^Parameter \#1 \$attributes of method Illuminate\\Database\\Eloquent\\Model\:\:fill\(\) expects array\<string, mixed\>, array\<int, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Services/Material/MaterialHistoryRestoreService.php
+
+		-
+			message: '#^Parameter \#1 \$key of method Illuminate\\Database\\Eloquent\\Model\:\:getAttribute\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Services/Material/MaterialHistoryRestoreService.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between array\{\} and array\{\} will always evaluate to true\.$#'
+			identifier: identical.alwaysTrue
+			count: 1
+			path: app/Services/Material/MaterialHistoryRestoreService.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\StoreLocation\:\:\$material_snapshot_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Services/Store/StoreMaterialSnapshotSynchronizer.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Services/Store/StoreMaterialSnapshotSynchronizer.php
+
+		-
+			message: '#^Parameter \#1 \$location of method App\\Services\\Store\\StoreMaterialSnapshotSynchronizer\:\:syncLocation\(\) expects App\\Models\\StoreLocation, Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Services/Store/StoreMaterialSnapshotSynchronizer.php
+
+		-
+			message: '#^Undefined variable\: \$location$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Services/Store/StoreMaterialSnapshotSynchronizer.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/Support/Observability/RequestCorrelation.php
+
+		-
+			message: '#^Method App\\Support\\Observability\\SentryEventContext\:\:beforeSend\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: app/Support/Observability/SentryEventContext.php
+
+		-
+			message: '#^Parameter \#1 \$user of method Sentry\\Event\:\:setUser\(\) expects Sentry\\UserDataBag\|null, array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Support/Observability/SentryEventContext.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between mixed and null will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: app/Support/Observability/SentryEventContext.php
+
+		-
+			message: '#^Match expression does not handle remaining value\: string$#'
+			identifier: match.unhandled
+			count: 1
+			path: app/Support/Supply/SupplyMaterialRegistry.php
+
+		-
+			message: '#^Call to an undefined method Faker\\Generator\:\:state\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: database/factories/StoreLocationFactory.php
+
+		-
+			message: '#^Return type \(array\<string, mixed\>\) of method Database\\Factories\\UserFactory\:\:definition\(\) should be compatible with return type \(array\<model property of App\\Models\\User, mixed\>\) of method Illuminate\\Database\\Eloquent\\Factories\\Factory\<App\\Models\\User\>\:\:definition\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: database/factories/UserFactory.php
