@@ -103,7 +103,21 @@ test('material catalog summary returns family and display totals', function (): 
     Brick::factory()->create([
         'brand' => 'Charlie Brick',
     ]);
-    Cement::factory()->count(3)->create();
+    Cement::factory()->create([
+        'brand' => 'Bravo Cement',
+        'type' => 'Portland',
+        'cement_name' => 'Bravo Cement Portland',
+    ]);
+    Cement::factory()->create([
+        'brand' => 'Beta Cement',
+        'type' => 'Masonry',
+        'cement_name' => 'Beta Cement Masonry',
+    ]);
+    Cement::factory()->create([
+        'brand' => 'Bima Cement',
+        'type' => 'Instant',
+        'cement_name' => 'Bima Cement Instant',
+    ]);
     collect(range(1, 4))->each(fn (int $index) => Nat::query()->create([
         'nat_name' => "Nat {$index}",
         'brand' => "Brand {$index}",

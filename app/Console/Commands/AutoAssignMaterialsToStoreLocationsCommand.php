@@ -92,6 +92,7 @@ class AutoAssignMaterialsToStoreLocationsCommand extends Command
                 $storeName = trim((string) ($material->store ?? ''));
                 if ($storeName === '') {
                     $stats['missing_store']++;
+
                     continue;
                 }
 
@@ -101,11 +102,13 @@ class AutoAssignMaterialsToStoreLocationsCommand extends Command
 
                 if (! $store) {
                     $stats['missing_store']++;
+
                     continue;
                 }
 
                 if (! $force && (int) ($material->store_location_id ?? 0) > 0) {
                     $stats['skipped_existing']++;
+
                     continue;
                 }
 
@@ -117,6 +120,7 @@ class AutoAssignMaterialsToStoreLocationsCommand extends Command
                     } else {
                         $stats['ambiguous_location']++;
                     }
+
                     continue;
                 }
 

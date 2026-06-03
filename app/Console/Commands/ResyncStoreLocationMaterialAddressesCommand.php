@@ -85,6 +85,7 @@ class ResyncStoreLocationMaterialAddressesCommand extends Command
                 $location = StoreLocation::query()->with('store')->find((int) ($material->store_location_id ?? 0));
                 if (! $location) {
                     $stats['missing_location']++;
+
                     continue;
                 }
 
@@ -104,6 +105,7 @@ class ResyncStoreLocationMaterialAddressesCommand extends Command
 
                 if (! $changed) {
                     $stats['unchanged']++;
+
                     continue;
                 }
 

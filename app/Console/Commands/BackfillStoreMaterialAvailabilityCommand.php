@@ -6,7 +6,6 @@ use App\Models\StoreLocation;
 use App\Models\StoreMaterialAvailability;
 use App\Support\Supply\SupplyMaterialRegistry;
 use Illuminate\Console\Command;
-use Illuminate\Database\Eloquent\Model;
 
 class BackfillStoreMaterialAvailabilityCommand extends Command
 {
@@ -45,6 +44,7 @@ class BackfillStoreMaterialAvailabilityCommand extends Command
                         $locationExists = StoreLocation::query()->whereKey($locationId)->exists();
                         if (! $locationExists) {
                             $missingLocation++;
+
                             continue;
                         }
 

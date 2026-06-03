@@ -30,12 +30,12 @@ final class SentryEventContext
 
         $requestId = RequestCorrelation::resolveRequestId($request);
         if ($requestId !== '') {
-            $event->setExtra('request_id', $requestId);
+            self::mergeExtra($event, ['request_id' => $requestId]);
         }
 
         $upstreamService = RequestCorrelation::incomingServiceName($request);
         if ($upstreamService !== null) {
-            $event->setExtra('upstream_service', $upstreamService);
+            self::mergeExtra($event, ['upstream_service' => $upstreamService]);
         }
 
         $actor = $request->attributes->get('supply_actor');
@@ -45,9 +45,14 @@ final class SentryEventContext
                 'username' => $actor['name'] ?? null,
             ], static fn (mixed $value): bool => $value !== null && $value !== ''));
 
-            $event->setExtra('actor_id', $actor['id']);
+            self::mergeExtra($event, ['actor_id' => $actor['id']]);
         }
 
         return $event;
+    }
+
+    private static function mergeExtra(Event $event, array $extra): void
+    {
+        $event->setExtra(array_merge($event->getExtra(), $extra));
     }
 }

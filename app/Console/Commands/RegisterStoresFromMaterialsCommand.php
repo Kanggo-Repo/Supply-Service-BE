@@ -101,7 +101,7 @@ class RegisterStoresFromMaterialsCommand extends Command
         $tableCounts = [];
 
         foreach (SupplyMaterialRegistry::models() as $family => $modelClass) {
-            $model = new $modelClass();
+            $model = new $modelClass;
             $table = $model->getTable();
 
             if (! Schema::hasTable($table) || ! Schema::hasColumn($table, 'store')) {
