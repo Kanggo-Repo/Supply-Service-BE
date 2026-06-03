@@ -18,6 +18,12 @@ use Spatie\Health\Http\Controllers\HealthCheckJsonResultsController;
 Route::prefix('v1')->group(function (): void {
     Route::get('/health', SupplyHealthController::class);
     Route::get('/health/json', HealthCheckJsonResultsController::class);
+
+    if (app()->environment(['local', 'testing'])) {
+        Route::get('/debug/sentry', function (): never {
+            throw new RuntimeException('Sentry test exception from supply-service-be');
+        });
+    }
 });
 
 Route::middleware(['trusted.service', 'supply.actor'])->prefix('v1/reference')->group(function (): void {
