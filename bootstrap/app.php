@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\AssignRequestCorrelation;
 use App\Http\Middleware\EnsureTrustedServiceCaller;
 use App\Http\Middleware\ResolveSupplyActorContext;
 use Illuminate\Foundation\Application;
@@ -16,6 +17,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->prepend(AssignRequestCorrelation::class);
+
         $middleware->alias([
             'trusted.service' => EnsureTrustedServiceCaller::class,
             'supply.actor' => ResolveSupplyActorContext::class,

@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\Models\User;
 use App\Support\Material\MaterialAuditContext;
+use App\Support\Observability\RequestCorrelation;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -25,7 +26,7 @@ class ResolveSupplyActorContext
         }
 
         $context = [
-            'batch_id' => $request->header('X-Request-Id', (string) Str::uuid()),
+            'batch_id' => RequestCorrelation::resolveRequestId($request),
             'user_id' => $actorId,
         ];
 
