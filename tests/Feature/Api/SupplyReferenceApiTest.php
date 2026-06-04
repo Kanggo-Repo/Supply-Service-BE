@@ -3,6 +3,7 @@
 use App\Models\Brick;
 use App\Models\BrickInstallationType;
 use App\Models\Cement;
+use App\Models\Ceramic;
 use App\Models\MortarFormula;
 use App\Models\Store;
 use App\Models\StoreLocation;
@@ -53,6 +54,37 @@ test('materials reference returns serialized materials filtered by families', fu
         ->assertJsonPath('data.0.dimension', '20x10x5')
         ->assertJsonPath('data.0.price', 1200)
         ->assertJsonPath('data.0.store_location_id', $location->id);
+});
+
+test('materials reference includes ceramic packaging fields needed by calculation service', function () {
+    $location = StoreLocation::factory()->create();
+    $ceramic = Ceramic::query()->create([
+        'material_name' => 'Keramik',
+        'type' => 'HT',
+        'brand' => 'Roman',
+        'sub_brand' => 'Granit',
+        'code' => 'GT612203R',
+        'color' => 'dBalsa Pine',
+        'dimension_length' => 60,
+        'dimension_width' => 15,
+        'dimension_thickness' => 1,
+        'pieces_per_package' => 12,
+        'coverage_per_package' => 1.08,
+        'surface' => 'Matt',
+        'store_location_id' => $location->id,
+        'price_per_package' => 255000,
+    ]);
+
+    $response = $this
+        ->withHeaders(trustedCallerHeaders())
+        ->getJson('/api/v1/reference/materials?families[]=ceramic');
+
+    $response->assertOk()
+        ->assertJsonPath('data.0.id', $ceramic->id)
+        ->assertJsonPath('data.0.code', 'GT612203R')
+        ->assertJsonPath('data.0.surface', 'Matt')
+        ->assertJsonPath('data.0.pieces_per_package', 12)
+        ->assertJsonPath('data.0.coverage_per_package', 1.08);
 });
 
 test('materials by ids groups serialized items by family', function () {
