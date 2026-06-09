@@ -139,6 +139,38 @@ test('material catalog summary returns family and display totals', function (): 
         ->assertJsonPath('data.grand_total', 9);
 });
 
+test('material catalog creates a cat material without an explicit cat_name', function (): void {
+    $location = StoreLocation::factory()->create();
+
+    $createResponse = $this
+        ->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', [
+            'type' => 'Tembok',
+            'brand' => 'Avian',
+            'sub_brand' => 'No Drop',
+            'color_code' => 'A-101',
+            'color_name' => 'Putih',
+            'package_unit' => 'Galon',
+            'package_weight_gross' => 5.5,
+            'package_weight_net' => 5,
+            'volume' => 4,
+            'purchase_price' => 250000,
+            'comparison_price_per_kg' => 50000,
+            'store_location_id' => $location->id,
+        ]);
+
+    $createResponse->assertCreated()
+        ->assertJsonPath('data.family', 'cat')
+        ->assertJsonPath('data.brand', 'Avian')
+        ->assertJsonPath('data.label', 'Avian Tembok');
+
+    $this->assertDatabaseHas('cats', [
+        'id' => $createResponse->json('data.id'),
+        'brand' => 'Avian',
+        'cat_name' => null,
+    ]);
+});
+
 test('material catalog create and update reject unknown attributes', function (): void {
     $createResponse = $this
         ->withHeaders(trustedCatalogHeaders())
