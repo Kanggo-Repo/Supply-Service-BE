@@ -11,37 +11,57 @@ use App\Models\Nat;
 use App\Models\Sand;
 use App\Models\Store;
 use App\Models\Unit;
+use App\Support\Supply\SupplyMaterialRegistry;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 
 class DashboardSummaryApiController extends Controller
 {
+    /**
+     * Chart categories shown on the dashboard, mirroring the material catalog
+     * display grouping where `nat` is folded into `cement` (Semen).
+     *
+     * @var array<string, array{label: string, families: list<string>}>
+     */
+    private const CHART_CATEGORIES = [
+        'brick' => ['label' => 'Bata', 'families' => ['brick']],
+        'cat' => ['label' => 'Cat', 'families' => ['cat']],
+        'cement' => ['label' => 'Semen', 'families' => ['cement', 'nat']],
+        'sand' => ['label' => 'Pasir', 'families' => ['sand']],
+        'ceramic' => ['label' => 'Keramik', 'families' => ['ceramic']],
+        'steel' => ['label' => 'Besi', 'families' => ['steel']],
+        'kasa_gypsum' => ['label' => 'Kasa Gypsum', 'families' => ['kasa_gypsum']],
+        'paku_tembak' => ['label' => 'Paku Tembak', 'families' => ['paku_tembak']],
+        'paku' => ['label' => 'Paku', 'families' => ['paku']],
+    ];
+
     public function __invoke(): JsonResponse
     {
-        $materialCounts = [
-            'brick' => Brick::query()->count(),
-            'cat' => Cat::query()->count(),
-            'cement' => Cement::query()->count(),
-            'nat' => Nat::query()->count(),
-            'sand' => Sand::query()->count(),
-            'ceramic' => Ceramic::query()->count(),
-        ];
+        $familyCounts = collect(SupplyMaterialRegistry::families())
+            ->mapWithKeys(function (string $family): array {
+                $modelClass = SupplyMaterialRegistry::modelForFamily($family);
+
+                return [$family => $modelClass ? $modelClass::query()->count() : 0];
+            })
+            ->all();
+
+        $chartLabels = [];
+        $chartData = [];
+
+        foreach (self::CHART_CATEGORIES as $category) {
+            $chartLabels[] = $category['label'];
+            $chartData[] = collect($category['families'])
+                ->sum(fn (string $family): int => (int) ($familyCounts[$family] ?? 0));
+        }
 
         return response()->json([
             'data' => [
-                'material_count' => array_sum($materialCounts),
+                'material_count' => array_sum($familyCounts),
                 'unit_count' => Unit::query()->count(),
                 'store_count' => Store::query()->count(),
                 'chart_data' => [
-                    'labels' => ['Bata', 'Cat', 'Semen', 'Nat', 'Pasir', 'Keramik'],
-                    'data' => [
-                        $materialCounts['brick'],
-                        $materialCounts['cat'],
-                        $materialCounts['cement'],
-                        $materialCounts['nat'],
-                        $materialCounts['sand'],
-                        $materialCounts['ceramic'],
-                    ],
+                    'labels' => $chartLabels,
+                    'data' => $chartData,
                 ],
                 'recent_activities' => $this->recentActivities()
                     ->sortByDesc('created_at')
