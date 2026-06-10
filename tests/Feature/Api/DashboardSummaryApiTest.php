@@ -5,7 +5,9 @@ use App\Models\Cat;
 use App\Models\Cement;
 use App\Models\Ceramic;
 use App\Models\Nat;
+use App\Models\Paku;
 use App\Models\Sand;
+use App\Models\Steel;
 use App\Models\Store;
 use App\Models\Unit;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -68,17 +70,37 @@ test('dashboard summary exposes real supply counts chart and recent activities',
         'created_at' => now()->subMinutes(5),
         'updated_at' => now()->subMinutes(5),
     ]);
+    Steel::query()->create([
+        'material_name' => 'Besi Beton SNI',
+        'brand' => 'Master Steel',
+        'type' => 'Ulir',
+        'created_at' => now()->subMinutes(4),
+        'updated_at' => now()->subMinutes(4),
+    ]);
+    Paku::query()->create([
+        'material_name' => 'Paku 5cm',
+        'brand' => 'Kenmaster',
+        'type' => 'Beton',
+        'created_at' => now()->subMinutes(3),
+        'updated_at' => now()->subMinutes(3),
+    ]);
 
     $this->withHeaders([
         'X-Service-Name' => 'platform-service-be',
         'X-Service-Token' => 'platform-be-test-token',
     ])->getJson('/api/v1/dashboard-summary')
         ->assertOk()
-        ->assertJsonPath('data.material_count', 6)
+        // Counts every registered material family (incl. nat, steel, paku, ...),
+        // matching the supply material catalog summary grand total.
+        ->assertJsonPath('data.material_count', 8)
         ->assertJsonPath('data.unit_count', 3)
         ->assertJsonPath('data.store_count', 2)
         ->assertJsonPath('data.chart_data.labels.0', 'Bata')
         ->assertJsonPath('data.chart_data.data.0', 1)
+        // Semen folds nat into cement (1 cement + 1 nat).
+        ->assertJsonPath('data.chart_data.labels.2', 'Semen')
+        ->assertJsonPath('data.chart_data.data.2', 2)
+        ->assertJsonPath('data.chart_data.labels.5', 'Besi')
         ->assertJsonPath('data.chart_data.data.5', 1)
         ->assertJsonCount(5, 'data.recent_activities');
 });
