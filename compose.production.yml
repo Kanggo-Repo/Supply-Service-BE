@@ -14,10 +14,13 @@ x-service-env: &service_env
   QUEUE_CONNECTION: ${QUEUE_CONNECTION:-redis}
   TELESCOPE_ENABLED: ${TELESCOPE_ENABLED:-false}
   OCTANE_SERVER: ${OCTANE_SERVER:-frankenphp}
-  # FrankenPHP/Caddy runs as www-data; point its config/data home at the
-  # writable storage volume so it can autosave config without errors.
-  XDG_CONFIG_HOME: /var/www/html/storage
-  XDG_DATA_HOME: /var/www/html/storage
+  # FrankenPHP/Caddy runs as www-data; point its config/data home at an
+  # ephemeral, writable, NON-mounted path so it never writes container-owned
+  # files into the bind-mounted storage volume (which would break the next
+  # build's context load with a permission error). TLS terminates at nginx,
+  # so this Caddy data is non-critical.
+  XDG_CONFIG_HOME: /tmp/caddy
+  XDG_DATA_HOME: /tmp/caddy
 
 services:
   supplybe_blue:
