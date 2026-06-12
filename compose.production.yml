@@ -24,6 +24,7 @@ services:
     build:
       context: ${APP_ROOT:-.}
       dockerfile: Dockerfile.production
+      network: host
       args:
         PHP_VERSION: ${PHP_VERSION:-8.3}
     container_name: supplybe_blue
@@ -64,6 +65,7 @@ services:
     build:
       context: ${APP_ROOT:-.}
       dockerfile: Dockerfile.production
+      network: host
       args:
         PHP_VERSION: ${PHP_VERSION:-8.3}
     container_name: supplybe_green
@@ -104,6 +106,7 @@ services:
     build:
       context: ${APP_ROOT:-.}
       dockerfile: Dockerfile.production
+      network: host
       args:
         PHP_VERSION: ${PHP_VERSION:-8.3}
     container_name: supplybe_queue
@@ -134,6 +137,7 @@ services:
     build:
       context: ${APP_ROOT:-.}
       dockerfile: Dockerfile.production
+      network: host
       args:
         PHP_VERSION: ${PHP_VERSION:-8.3}
     container_name: supplybe_scheduler
