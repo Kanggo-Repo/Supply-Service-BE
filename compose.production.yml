@@ -125,6 +125,8 @@ services:
       - ${APP_ROOT:-.}/storage:/var/www/html/storage
     networks:
       - backend
+    healthcheck:
+      disable: true
     deploy:
       resources:
         limits:
@@ -155,6 +157,8 @@ services:
       - ${APP_ROOT:-.}/storage:/var/www/html/storage
     networks:
       - backend
+    healthcheck:
+      disable: true
     deploy:
       resources:
         limits:
