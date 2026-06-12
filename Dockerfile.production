@@ -1,7 +1,10 @@
 # syntax=docker/dockerfile:1
 
 ARG PHP_VERSION=8.3
-FROM dunglas/frankenphp:php${PHP_VERSION}-alpine AS php-base
+# Pinned by digest (Alpine 3.24, FrankenPHP 1.12, PHP 8.3.31) for reproducible
+# builds — the mutable :php8.3-alpine tag drifted to an Alpine where the -dev
+# build packages were unavailable on the runner. Bump deliberately when upgrading.
+FROM dunglas/frankenphp:php${PHP_VERSION}-alpine@sha256:f6e69d3681ec76b38cd9b4a7c4a3a871d46ec799673d042bf8eecfbec9d01e77 AS php-base
 
 WORKDIR /var/www/html
 
