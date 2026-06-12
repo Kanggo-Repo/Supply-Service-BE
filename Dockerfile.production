@@ -8,32 +8,18 @@ FROM dunglas/frankenphp:php${PHP_VERSION}-alpine@sha256:f6e69d3681ec76b38cd9b4a7
 
 WORKDIR /var/www/html
 
+# Robust PHP extension install via the de-facto standard installer: it pulls
+# the right build deps + runtime libs, compiles, and cleans up — avoiding the
+# fragile manual apk build-deps + pecl REST resolution that broke on the runner.
+COPY --from=mlocati/php-extension-installer:2@sha256:24b0e392309d7085c05b3dc2429bf1c0d934b7d07ded31d212367405e4554a84 /usr/bin/install-php-extensions /usr/local/bin/
+
 RUN set -eux; \
     apk add --no-cache \
         curl \
-        fcgi \
-        freetype \
-        icu-libs \
-        libjpeg-turbo \
-        libpng \
-        libzip \
         mysql-client \
-        oniguruma \
-        sqlite-libs \
         unzip \
         zip; \
-    apk add --no-cache --virtual .build-deps \
-        $PHPIZE_DEPS \
-        freetype-dev \
-        icu-dev \
-        libjpeg-turbo-dev \
-        libpng-dev \
-        libzip-dev \
-        linux-headers \
-        oniguruma-dev \
-        sqlite-dev; \
-    docker-php-ext-configure gd --with-freetype --with-jpeg; \
-    docker-php-ext-install -j"$(nproc)" \
+    install-php-extensions \
         bcmath \
         exif \
         gd \
@@ -43,11 +29,8 @@ RUN set -eux; \
         pcntl \
         pdo_mysql \
         pdo_sqlite \
-        zip; \
-    pecl install redis; \
-    docker-php-ext-enable redis; \
-    apk del .build-deps; \
-    rm -rf /tmp/pear
+        zip \
+        redis
 
 RUN { \
         echo "memory_limit=256M"; \
