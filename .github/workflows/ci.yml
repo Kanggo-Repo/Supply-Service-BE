@@ -17,7 +17,7 @@ on:
 
 concurrency:
   group: supply-service-be-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref_name != 'main' && github.ref_name != 'staging' }}
 
 jobs:
   resolve_target:
