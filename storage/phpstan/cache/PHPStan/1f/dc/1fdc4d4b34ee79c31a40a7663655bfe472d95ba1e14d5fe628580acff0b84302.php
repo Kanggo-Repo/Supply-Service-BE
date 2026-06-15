@@ -298,7 +298,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Support\\Supply\\SupplyMaterialRegistry.php' => 'f0b1da35c5a81c649f9afbc9f43539df55d9506509cb29d2f8ecf1c27a70506b',
+      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Support\\Supply\\SupplyMaterialRegistry.php' => '2ab7e9ea4d61227178da5976e6c2698d649defc655894c0d78bc36f39bb209d8',
     ),
   ),
 ));

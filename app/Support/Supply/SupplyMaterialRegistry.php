@@ -310,6 +310,11 @@ class SupplyMaterialRegistry
     {
         $excluded = [
             'photo',
+            // The display name (material_name/cat_name/cement_name/…) is a label,
+            // often an auto-composed string ("Besi Hollow Galvalum Las Aplus
+            // G-550 2x4") vs a short one ("Besi") for the SAME product — so it is
+            // not part of the product identity; the structured attributes are.
+            self::nameField($family),
             // store / address / short_address are denormalised snapshots of
             // store_location_id (kept in sync by SyncsStoreLocationSnapshot), so
             // the store identity is carried by store_location_id alone.

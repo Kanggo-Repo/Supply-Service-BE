@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\ekaga\OneDrive\Documents\Code\K-3Repo\supply-service-be\app\Support\Supply\SupplyMaterialRegistry.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Support\Supply\SupplyMaterialRegistry
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.3.31-f0b1da35c5a81c649f9afbc9f43539df55d9506509cb29d2f8ecf1c27a70506b',
+   'variableKey' => 'v2-6.70.0.1-8.3.31-2ab7e9ea4d61227178da5976e6c2698d649defc655894c0d78bc36f39bb209d8',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 16,
-    'endLine' => 333,
+    'endLine' => 338,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -538,7 +538,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return list<string>
  */',
         'startLine' => 309,
-        'endLine' => 332,
+        'endLine' => 337,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

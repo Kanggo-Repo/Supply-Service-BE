@@ -308,6 +308,32 @@ test('material catalog rejects updating a material into a duplicate of another',
         ->assertJsonValidationErrors(['duplicate']);
 });
 
+test('material catalog treats a different display name as the same product (name is not identity)', function (): void {
+    $location = StoreLocation::factory()->create();
+
+    $base = [
+        'type' => 'Waterproofing',
+        'brand' => 'Aquaproof',
+        'color_code' => '061',
+        'color_name' => 'Abu-Abu',
+        'package_unit' => 'Galon',
+        'volume' => 4,
+        'store_location_id' => $location->id,
+    ];
+
+    $this->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', array_merge($base, ['cat_name' => 'Aquaproof Abu-Abu 061 Galon']))
+        ->assertCreated();
+
+    // Same product; only the display name differs -> still a duplicate.
+    $this->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', array_merge($base, ['cat_name' => 'Cat Pendek']))
+        ->assertUnprocessable()
+        ->assertJsonValidationErrors(['duplicate']);
+
+    expect(Cat::query()->count())->toBe(1);
+});
+
 function trustedCatalogHeaders(): array
 {
     return [
