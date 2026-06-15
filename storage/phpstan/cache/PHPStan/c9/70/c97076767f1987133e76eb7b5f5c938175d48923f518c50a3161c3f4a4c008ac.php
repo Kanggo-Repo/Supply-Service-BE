@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Queue/Console/ClearCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Queue\Console\ClearCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-f9e6daa079a689099d16d54c19fce3969917769f63f5566d3d58d48fc4c4bf1b-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-2f88a0c99c4e91185f0b293fdba23aef617b3745991ffd1e255f0f69cf6babe2-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -36,19 +36,19 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'code' => '\'queue:clear\'',
             'attributes' => 
             array (
-              'startLine' => 14,
-              'endLine' => 14,
-              'startTokenPos' => 53,
-              'startFilePos' => 383,
-              'endTokenPos' => 53,
-              'endFilePos' => 395,
+              'startLine' => 15,
+              'endLine' => 15,
+              'startTokenPos' => 58,
+              'startFilePos' => 420,
+              'endTokenPos' => 58,
+              'endFilePos' => 432,
             ),
           ),
         ),
       ),
     ),
-    'startLine' => 14,
-    'endLine' => 105,
+    'startLine' => 15,
+    'endLine' => 107,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Console\\Command',
@@ -58,6 +58,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'traitClassNames' => 
     array (
       0 => 'Illuminate\\Console\\ConfirmableTrait',
+      1 => 'Illuminate\\Console\\Prohibitable',
     ),
     'immediateConstants' => 
     array (
@@ -76,12 +77,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'queue:clear\'',
           'attributes' => 
           array (
-            'startLine' => 24,
-            'endLine' => 24,
-            'startTokenPos' => 80,
-            'startFilePos' => 560,
-            'endTokenPos' => 80,
-            'endFilePos' => 572,
+            'startLine' => 25,
+            'endLine' => 25,
+            'startTokenPos' => 88,
+            'startFilePos' => 611,
+            'endTokenPos' => 88,
+            'endFilePos' => 623,
           ),
         ),
         'docComment' => '/**
@@ -92,8 +93,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'startLine' => 24,
-        'endLine' => 24,
+        'startLine' => 25,
+        'endLine' => 25,
         'startColumn' => 5,
         'endColumn' => 36,
         'isPromoted' => false,
@@ -115,12 +116,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'Delete all of the jobs from the specified queue\'',
           'attributes' => 
           array (
-            'startLine' => 31,
-            'endLine' => 31,
-            'startTokenPos' => 91,
-            'startFilePos' => 687,
-            'endTokenPos' => 91,
-            'endFilePos' => 735,
+            'startLine' => 32,
+            'endLine' => 32,
+            'startTokenPos' => 99,
+            'startFilePos' => 738,
+            'endTokenPos' => 99,
+            'endFilePos' => 786,
           ),
         ),
         'docComment' => '/**
@@ -131,8 +132,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'startLine' => 31,
-        'endLine' => 31,
+        'startLine' => 32,
+        'endLine' => 32,
         'startColumn' => 5,
         'endColumn' => 79,
         'isPromoted' => false,
@@ -161,8 +162,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return int|null
  */',
-        'startLine' => 38,
-        'endLine' => 65,
+        'startLine' => 39,
+        'endLine' => 67,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -192,8 +193,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 73,
-            'endLine' => 73,
+            'startLine' => 75,
+            'endLine' => 75,
             'startColumn' => 33,
             'endColumn' => 43,
             'parameterIndex' => 0,
@@ -211,8 +212,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  string  $connection
  * @return string
  */',
-        'startLine' => 73,
-        'endLine' => 78,
+        'startLine' => 75,
+        'endLine' => 80,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -242,8 +243,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return array
  */',
-        'startLine' => 85,
-        'endLine' => 90,
+        'startLine' => 87,
+        'endLine' => 92,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -273,8 +274,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return array
  */',
-        'startLine' => 97,
-        'endLine' => 104,
+        'startLine' => 99,
+        'endLine' => 106,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

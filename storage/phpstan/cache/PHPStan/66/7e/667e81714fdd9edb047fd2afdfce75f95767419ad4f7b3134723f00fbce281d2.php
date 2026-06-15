@@ -4277,7 +4277,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php' => '8bfce87ea4411cb2ccb2899d1a6c0cf5cb3aa56d967ef04cf930f1d8def4f5e3',
+      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php' => 'cbc4d3d95d4fc8d47ae90730ecc1e3e2289847e051c2d20491df78c89417e35a',
       'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Log\\ParsesLogConfiguration.php' => '078a0c5b69e44de5c8a0df5c6ed22b8db6fce24d347785c74675b08c600ccea3',
       'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Support\\RebindsCallbacksToSelf.php' => '383b935e55713b11f151d4ca3e669abbd1047f06702b2714e1deea28a6d0c29a',
     ),

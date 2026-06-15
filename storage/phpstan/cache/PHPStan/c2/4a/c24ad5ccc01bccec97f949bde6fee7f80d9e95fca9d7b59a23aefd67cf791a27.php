@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Database/DetectsLostConnections.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Database\DetectsLostConnections
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-2281b371944d7b591b52ed6425f96282812940d6a7382e1a78949c40b8eba091-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-2281b371944d7b591b52ed6425f96282812940d6a7382e1a78949c40b8eba091-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 

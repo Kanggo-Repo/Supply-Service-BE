@@ -287,6 +287,76 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      'b893afa06ddae26b98d6aa86ddb651f7' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Http\\Controllers\\Api\\V1',
+         'uses' => 
+        array (
+          'controller' => 'App\\Http\\Controllers\\Controller',
+          'storelocation' => 'App\\Models\\StoreLocation',
+          'materialauditcontext' => 'App\\Support\\Material\\MaterialAuditContext',
+          'supplymateriallabelresolver' => 'App\\Support\\Supply\\SupplyMaterialLabelResolver',
+          'supplymaterialregistry' => 'App\\Support\\Supply\\SupplyMaterialRegistry',
+          'model' => 'Illuminate\\Database\\Eloquent\\Model',
+          'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+          'request' => 'Illuminate\\Http\\Request',
+          'arr' => 'Illuminate\\Support\\Arr',
+          'collection' => 'Illuminate\\Support\\Collection',
+          'schema' => 'Illuminate\\Support\\Facades\\Schema',
+          'validator' => 'Illuminate\\Support\\Facades\\Validator',
+          'rule' => 'Illuminate\\Validation\\Rule',
+        ),
+         'className' => 'App\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController',
+         'functionName' => 'findDuplicate',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      'ae262a22f938ee491533e13851961bcb' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Http\\Controllers\\Api\\V1',
+         'uses' => 
+        array (
+          'controller' => 'App\\Http\\Controllers\\Controller',
+          'storelocation' => 'App\\Models\\StoreLocation',
+          'materialauditcontext' => 'App\\Support\\Material\\MaterialAuditContext',
+          'supplymateriallabelresolver' => 'App\\Support\\Supply\\SupplyMaterialLabelResolver',
+          'supplymaterialregistry' => 'App\\Support\\Supply\\SupplyMaterialRegistry',
+          'model' => 'Illuminate\\Database\\Eloquent\\Model',
+          'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+          'request' => 'Illuminate\\Http\\Request',
+          'arr' => 'Illuminate\\Support\\Arr',
+          'collection' => 'Illuminate\\Support\\Collection',
+          'schema' => 'Illuminate\\Support\\Facades\\Schema',
+          'validator' => 'Illuminate\\Support\\Facades\\Validator',
+          'rule' => 'Illuminate\\Validation\\Rule',
+        ),
+         'className' => 'App\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController',
+         'functionName' => 'duplicateErrorPayload',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
       '48ffbbc56a4252ffa79306fcd5f09663' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'App\\Http\\Controllers\\Api\\V1',
@@ -500,7 +570,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController.php' => 'ca33f7567cc4d5f8627047045933f90aabb74fd1b4ebca6546116896bc456f70',
+      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController.php' => '883bd9d79b20d19de1b307228e917cc9176f7dc29e13f55fba24a707a952530b',
     ),
   ),
 ));

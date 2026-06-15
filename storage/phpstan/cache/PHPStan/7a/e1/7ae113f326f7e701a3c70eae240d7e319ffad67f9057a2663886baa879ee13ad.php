@@ -44,6 +44,152 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      'b800d95b596a9cd919bf6b7a7fc2245b' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'Symfony\\Component\\Console\\Command',
+         'uses' => 
+        array (
+          'application' => 'Symfony\\Component\\Console\\Application',
+          'ascommand' => 'Symfony\\Component\\Console\\Attribute\\AsCommand',
+          'completioninput' => 'Symfony\\Component\\Console\\Completion\\CompletionInput',
+          'completionsuggestions' => 'Symfony\\Component\\Console\\Completion\\CompletionSuggestions',
+          'suggestion' => 'Symfony\\Component\\Console\\Completion\\Suggestion',
+          'exceptioninterface' => 'Symfony\\Component\\Console\\Exception\\ExceptionInterface',
+          'invalidargumentexception' => 'Symfony\\Component\\Console\\Exception\\InvalidArgumentException',
+          'logicexception' => 'Symfony\\Component\\Console\\Exception\\LogicException',
+          'helperinterface' => 'Symfony\\Component\\Console\\Helper\\HelperInterface',
+          'helperset' => 'Symfony\\Component\\Console\\Helper\\HelperSet',
+          'inputargument' => 'Symfony\\Component\\Console\\Input\\InputArgument',
+          'inputdefinition' => 'Symfony\\Component\\Console\\Input\\InputDefinition',
+          'inputinterface' => 'Symfony\\Component\\Console\\Input\\InputInterface',
+          'inputoption' => 'Symfony\\Component\\Console\\Input\\InputOption',
+          'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+        ),
+         'className' => 'Symfony\\Component\\Console\\Command\\Command',
+         'functionName' => 'getDefaultName',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'Symfony\\Component\\Console\\Command',
+           'uses' => 
+          array (
+            'application' => 'Symfony\\Component\\Console\\Application',
+            'ascommand' => 'Symfony\\Component\\Console\\Attribute\\AsCommand',
+            'completioninput' => 'Symfony\\Component\\Console\\Completion\\CompletionInput',
+            'completionsuggestions' => 'Symfony\\Component\\Console\\Completion\\CompletionSuggestions',
+            'suggestion' => 'Symfony\\Component\\Console\\Completion\\Suggestion',
+            'exceptioninterface' => 'Symfony\\Component\\Console\\Exception\\ExceptionInterface',
+            'invalidargumentexception' => 'Symfony\\Component\\Console\\Exception\\InvalidArgumentException',
+            'logicexception' => 'Symfony\\Component\\Console\\Exception\\LogicException',
+            'helperinterface' => 'Symfony\\Component\\Console\\Helper\\HelperInterface',
+            'helperset' => 'Symfony\\Component\\Console\\Helper\\HelperSet',
+            'inputargument' => 'Symfony\\Component\\Console\\Input\\InputArgument',
+            'inputdefinition' => 'Symfony\\Component\\Console\\Input\\InputDefinition',
+            'inputinterface' => 'Symfony\\Component\\Console\\Input\\InputInterface',
+            'inputoption' => 'Symfony\\Component\\Console\\Input\\InputOption',
+            'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+          ),
+           'className' => 'Symfony\\Component\\Console\\Command\\Command',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '619f3ed4aef0417cc5213d04140b3512' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'Symfony\\Component\\Console\\Command',
+         'uses' => 
+        array (
+          'application' => 'Symfony\\Component\\Console\\Application',
+          'ascommand' => 'Symfony\\Component\\Console\\Attribute\\AsCommand',
+          'completioninput' => 'Symfony\\Component\\Console\\Completion\\CompletionInput',
+          'completionsuggestions' => 'Symfony\\Component\\Console\\Completion\\CompletionSuggestions',
+          'suggestion' => 'Symfony\\Component\\Console\\Completion\\Suggestion',
+          'exceptioninterface' => 'Symfony\\Component\\Console\\Exception\\ExceptionInterface',
+          'invalidargumentexception' => 'Symfony\\Component\\Console\\Exception\\InvalidArgumentException',
+          'logicexception' => 'Symfony\\Component\\Console\\Exception\\LogicException',
+          'helperinterface' => 'Symfony\\Component\\Console\\Helper\\HelperInterface',
+          'helperset' => 'Symfony\\Component\\Console\\Helper\\HelperSet',
+          'inputargument' => 'Symfony\\Component\\Console\\Input\\InputArgument',
+          'inputdefinition' => 'Symfony\\Component\\Console\\Input\\InputDefinition',
+          'inputinterface' => 'Symfony\\Component\\Console\\Input\\InputInterface',
+          'inputoption' => 'Symfony\\Component\\Console\\Input\\InputOption',
+          'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+        ),
+         'className' => 'Symfony\\Component\\Console\\Command\\Command',
+         'functionName' => 'getDefaultDescription',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'Symfony\\Component\\Console\\Command',
+           'uses' => 
+          array (
+            'application' => 'Symfony\\Component\\Console\\Application',
+            'ascommand' => 'Symfony\\Component\\Console\\Attribute\\AsCommand',
+            'completioninput' => 'Symfony\\Component\\Console\\Completion\\CompletionInput',
+            'completionsuggestions' => 'Symfony\\Component\\Console\\Completion\\CompletionSuggestions',
+            'suggestion' => 'Symfony\\Component\\Console\\Completion\\Suggestion',
+            'exceptioninterface' => 'Symfony\\Component\\Console\\Exception\\ExceptionInterface',
+            'invalidargumentexception' => 'Symfony\\Component\\Console\\Exception\\InvalidArgumentException',
+            'logicexception' => 'Symfony\\Component\\Console\\Exception\\LogicException',
+            'helperinterface' => 'Symfony\\Component\\Console\\Helper\\HelperInterface',
+            'helperset' => 'Symfony\\Component\\Console\\Helper\\HelperSet',
+            'inputargument' => 'Symfony\\Component\\Console\\Input\\InputArgument',
+            'inputdefinition' => 'Symfony\\Component\\Console\\Input\\InputDefinition',
+            'inputinterface' => 'Symfony\\Component\\Console\\Input\\InputInterface',
+            'inputoption' => 'Symfony\\Component\\Console\\Input\\InputOption',
+            'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+          ),
+           'className' => 'Symfony\\Component\\Console\\Command\\Command',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
       '5c33077955abb027a5a381cbc7c2e83d' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'Symfony\\Component\\Console\\Command',
@@ -2967,7 +3113,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\symfony\\console\\Command\\Command.php' => '06c1d66d9f0fa63b57f01d503fcb9506826a1db70e108cdf7bad13fc09003c29',
+      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\symfony\\console\\Command\\Command.php' => 'eff4e0235a3e958d97c438c72cb5235404c54f2d46c2d1530aff3b9d7799a70b',
     ),
   ),
 ));

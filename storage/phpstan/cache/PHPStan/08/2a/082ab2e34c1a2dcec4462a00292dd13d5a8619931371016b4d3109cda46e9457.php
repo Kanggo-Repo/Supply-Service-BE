@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Foundation/Console/DownCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Foundation\Console\DownCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-642c8be360560edc82c400230196a6c8954cfc9bce235707311d4a12050377eb-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-0d17b6a838a4f33de657d4d578b3328c35493fb4f510269bf78115a2e0b036a3-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -48,7 +48,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       ),
     ),
     'startLine' => 17,
-    'endLine' => 182,
+    'endLine' => 184,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Console\\Command',
@@ -167,7 +167,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return int
  */',
         'startLine' => 45,
-        'endLine' => 77,
+        'endLine' => 79,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -197,8 +197,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return array
  */',
-        'startLine' => 84,
-        'endLine' => 95,
+        'startLine' => 86,
+        'endLine' => 97,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -228,8 +228,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return array
  */',
-        'startLine' => 102,
-        'endLine' => 113,
+        'startLine' => 104,
+        'endLine' => 115,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -259,8 +259,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return string
  */',
-        'startLine' => 120,
-        'endLine' => 127,
+        'startLine' => 122,
+        'endLine' => 129,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -290,8 +290,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return string
  */',
-        'startLine' => 134,
-        'endLine' => 141,
+        'startLine' => 136,
+        'endLine' => 143,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -321,8 +321,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return int|string|null
  */',
-        'startLine' => 148,
-        'endLine' => 167,
+        'startLine' => 150,
+        'endLine' => 169,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -352,8 +352,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return string|null
  */',
-        'startLine' => 174,
-        'endLine' => 181,
+        'startLine' => 176,
+        'endLine' => 183,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

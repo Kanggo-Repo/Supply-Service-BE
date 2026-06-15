@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../symfony/console/Command/ListCommand.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-af560ecb7965bbd9befbd6af4703dfb1987f1b53688fdc08339eff205657b647-8.5.4',
+   'variableKey' => 'v2-af560ecb7965bbd9befbd6af4703dfb1987f1b53688fdc08339eff205657b647-8.3.31',
    'data' => 
   array (
     'classes' => 

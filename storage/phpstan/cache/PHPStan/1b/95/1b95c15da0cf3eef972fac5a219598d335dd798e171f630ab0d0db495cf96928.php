@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Database\Console\Migrations\RollbackCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-bd8bdcb85ab772f0d3470c37992e96f24be1844fe30dc65875816e799bd9f361-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-bd8bdcb85ab772f0d3470c37992e96f24be1844fe30dc65875816e799bd9f361-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 

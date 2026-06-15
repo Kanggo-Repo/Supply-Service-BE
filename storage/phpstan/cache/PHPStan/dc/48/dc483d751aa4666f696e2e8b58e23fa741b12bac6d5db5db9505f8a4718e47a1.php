@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Foundation/Console/PackageDiscoverCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Foundation\Console\PackageDiscoverCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-03ff42ce7ad664de9de1c6f3bf353f51b9e09f228f28156bfc06b49588c22390-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-03ff42ce7ad664de9de1c6f3bf353f51b9e09f228f28156bfc06b49588c22390-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 

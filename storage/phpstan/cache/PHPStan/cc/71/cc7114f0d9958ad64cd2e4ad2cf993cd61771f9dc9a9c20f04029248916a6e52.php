@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Http/Response.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Http\Response
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-882f3b7e469ea9c7bf932783c6c178aeec1845b2f1b81aefb8dad43028fe34ba-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-35af164242bff3aed00409a101fce5bf406548c164258bbbab8bf4452048708f-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 15,
-    'endLine' => 117,
+    'endLine' => 121,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Symfony\\Component\\HttpFoundation\\Response',
@@ -166,7 +166,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @throws \\InvalidArgumentException
  */',
         'startLine' => 30,
-        'endLine' => 37,
+        'endLine' => 41,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -229,8 +229,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Get the response content.
  */',
-        'startLine' => 42,
-        'endLine' => 46,
+        'startLine' => 46,
+        'endLine' => 50,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -268,8 +268,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 57,
-            'endLine' => 57,
+            'startLine' => 61,
+            'endLine' => 61,
             'startColumn' => 32,
             'endColumn' => 45,
             'parameterIndex' => 0,
@@ -305,8 +305,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @throws \\InvalidArgumentException
  */',
-        'startLine' => 56,
-        'endLine' => 84,
+        'startLine' => 60,
+        'endLine' => 88,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -336,8 +336,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 92,
-            'endLine' => 92,
+            'startLine' => 96,
+            'endLine' => 96,
             'startColumn' => 37,
             'endColumn' => 44,
             'parameterIndex' => 0,
@@ -355,8 +355,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  mixed  $content
  * @return bool
  */',
-        'startLine' => 92,
-        'endLine' => 99,
+        'startLine' => 96,
+        'endLine' => 103,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -386,8 +386,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 107,
-            'endLine' => 107,
+            'startLine' => 111,
+            'endLine' => 111,
             'startColumn' => 36,
             'endColumn' => 43,
             'parameterIndex' => 0,
@@ -405,8 +405,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  mixed  $content
  * @return string|false
  */',
-        'startLine' => 107,
-        'endLine' => 116,
+        'startLine' => 111,
+        'endLine' => 120,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

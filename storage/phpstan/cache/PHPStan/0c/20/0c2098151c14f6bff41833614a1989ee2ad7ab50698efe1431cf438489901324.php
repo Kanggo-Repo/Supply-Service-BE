@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Auth/Authenticatable.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-2e77879a3194ca97b95b4746209592eca3fe6a3330e99b372bc7bbb4a60c5c06-8.5.4',
+   'variableKey' => 'v2-2e77879a3194ca97b95b4746209592eca3fe6a3330e99b372bc7bbb4a60c5c06-8.3.31',
    'data' => 
   array (
     'classes' => 

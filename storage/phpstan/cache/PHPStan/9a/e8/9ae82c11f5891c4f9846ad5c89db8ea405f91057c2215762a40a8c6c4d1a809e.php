@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\sebastian\\environment\\src\\Runtime.php' => 
     array (
-      0 => '494c6df7d503b2a724a446e5cb243c4ae263ca1097e1246a9ebc6f04a30b64d3',
+      0 => 'c39ea4fdbf32204558578375620874f03a7d95d3cd2ffa7f99b49181b1d83c04',
       1 => 
       array (
         0 => 'sebastianbergmann\\environment\\runtime',
@@ -52,6 +52,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         15 => 'sebastianbergmann\\environment\\getcurrentsettings',
         16 => 'sebastianbergmann\\environment\\getsettingsnotchangeableatruntime',
         17 => 'sebastianbergmann\\environment\\isopcacheactive',
+        18 => 'sebastianbergmann\\environment\\parseloadedinifiles',
+        19 => 'sebastianbergmann\\environment\\compileddefaults',
       ),
       3 => 
       array (

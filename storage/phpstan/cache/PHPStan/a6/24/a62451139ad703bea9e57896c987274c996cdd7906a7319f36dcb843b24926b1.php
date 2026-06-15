@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\ekaga\OneDrive\Documents\Code\K-3Repo\supply-service-be\app\Models\StoreMaterialAvailability.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\StoreMaterialAvailability
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.5.4-d5f9729fb10163461d6a4ac23224507cfc1d6e6d3172394a034becf8a24a5c59',
+   'variableKey' => 'v2-6.70.0.1-8.3.31-d5f9729fb10163461d6a4ac23224507cfc1d6e6d3172394a034becf8a24a5c59',
    'data' => 
   array (
     'locatedSource' => 

@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\ekaga\OneDrive\Documents\Code\K-3Repo\supply-service-be\app\Console\Commands\AutoAssignMaterialsToStoreLocationsCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Console\Commands\AutoAssignMaterialsToStoreLocationsCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.5.4-0063d6e5fcd3917f61ad3a07954a93a53daf7b9939c88a98aff293cc0f6b9d40',
+   'variableKey' => 'v2-6.70.0.1-8.3.31-0063d6e5fcd3917f61ad3a07954a93a53daf7b9939c88a98aff293cc0f6b9d40',
    'data' => 
   array (
     'locatedSource' => 

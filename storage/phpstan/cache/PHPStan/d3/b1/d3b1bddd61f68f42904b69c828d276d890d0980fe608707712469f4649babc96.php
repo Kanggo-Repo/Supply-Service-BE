@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/telescope/src/AuthorizesRequests.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Laravel\Telescope\AuthorizesRequests
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-35c2dbe42a8a955301edb7a5f386b91b16ffd0d0391c2290f4e355f6a00c5aef-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-35c2dbe42a8a955301edb7a5f386b91b16ffd0d0391c2290f4e355f6a00c5aef-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 

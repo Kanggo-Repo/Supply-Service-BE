@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../symfony/http-kernel/Exception/HttpException.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-eb9012af4a3bb1eef340f3b329abba79971ee2ab3bfc7bbec4802db13ced3d68-8.5.4',
+   'variableKey' => 'v2-eb9012af4a3bb1eef340f3b329abba79971ee2ab3bfc7bbec4802db13ced3d68-8.3.31',
    'data' => 
   array (
     'classes' => 

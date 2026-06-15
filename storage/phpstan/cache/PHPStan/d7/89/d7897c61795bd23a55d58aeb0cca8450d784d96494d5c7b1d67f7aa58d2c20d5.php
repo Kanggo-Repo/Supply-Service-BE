@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\ekaga\OneDrive\Documents\Code\K-3Repo\supply-service-be\app\Support\Supply\SupplyMaterialRegistry.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Support\Supply\SupplyMaterialRegistry
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.5.4-5bfafa8d81d6809f96d090969b8440bade1e7ba2b6dd2089f1a15872437e9061',
+   'variableKey' => 'v2-6.70.0.1-8.3.31-f0b1da35c5a81c649f9afbc9f43539df55d9506509cb29d2f8ecf1c27a70506b',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 16,
-    'endLine' => 299,
+    'endLine' => 333,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -470,6 +470,75 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  */',
         'startLine' => 103,
         'endLine' => 298,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 17,
+        'namespace' => 'App\\Support\\Supply',
+        'declaringClassName' => 'App\\Support\\Supply\\SupplyMaterialRegistry',
+        'implementingClassName' => 'App\\Support\\Supply\\SupplyMaterialRegistry',
+        'currentClassName' => 'App\\Support\\Supply\\SupplyMaterialRegistry',
+        'aliasName' => NULL,
+      ),
+      'identityFields' => 
+      array (
+        'name' => 'identityFields',
+        'parameters' => 
+        array (
+          'family' => 
+          array (
+            'name' => 'family',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'string',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 309,
+            'endLine' => 309,
+            'startColumn' => 43,
+            'endColumn' => 56,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'array',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Fields that identify a material for duplicate detection: the descriptive
+ * attributes (brand, colour, dimensions, packaging, store/location) minus
+ * price amounts, photo, and the store-derived free-text address. Two active
+ * rows of the same family that match on all of these are true duplicates
+ * (the same product at the same store) regardless of price.
+ *
+ * @return list<string>
+ */',
+        'startLine' => 309,
+        'endLine' => 332,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

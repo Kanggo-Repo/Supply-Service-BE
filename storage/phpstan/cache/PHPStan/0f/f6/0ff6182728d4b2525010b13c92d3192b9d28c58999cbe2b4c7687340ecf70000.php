@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Foundation/Console/UpCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Foundation\Console\UpCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-7ecea526ab4398d57b767c0e07c0cfb40bba33c79d7803508b3acaa0a4116e9c-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-3b0af3830462e0bfa8609a47ab99b186c283f4b199e5a8387bf5f03c19450e29-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -48,7 +48,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       ),
     ),
     'startLine' => 10,
-    'endLine' => 61,
+    'endLine' => 63,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Console\\Command',
@@ -161,7 +161,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return int
  */',
         'startLine' => 32,
-        'endLine' => 60,
+        'endLine' => 62,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

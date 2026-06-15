@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Support/Optional.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Support\Optional
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-fdf7e4c57240c7a53869fce834833bc201f5816a180c062f49bed4ad9889e122-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-9476d8a3735b8426e6984a2c60b7fecd18edf9fa95f3beb0c38629d78ca7f1ff-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -456,7 +456,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Unset the item at a given offset.
  *
- * @param  string  $offset
+ * @param  mixed  $offset
  * @return void
  */',
         'startLine' => 106,

@@ -1108,6 +1108,61 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      '40cb3d3549e1474984b18423d56388b9' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'Symfony\\Component\\HttpFoundation',
+         'uses' => 
+        array (
+          'badrequestexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\BadRequestException',
+          'conflictingheadersexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\ConflictingHeadersException',
+          'jsonexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\JsonException',
+          'sessionnotfoundexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException',
+          'suspiciousoperationexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\SuspiciousOperationException',
+          'sessioninterface' => 'Symfony\\Component\\HttpFoundation\\Session\\SessionInterface',
+        ),
+         'className' => 'Symfony\\Component\\HttpFoundation\\Request',
+         'functionName' => 'get',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'Symfony\\Component\\HttpFoundation',
+           'uses' => 
+          array (
+            'badrequestexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\BadRequestException',
+            'conflictingheadersexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\ConflictingHeadersException',
+            'jsonexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\JsonException',
+            'sessionnotfoundexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException',
+            'suspiciousoperationexception' => 'Symfony\\Component\\HttpFoundation\\Exception\\SuspiciousOperationException',
+            'sessioninterface' => 'Symfony\\Component\\HttpFoundation\\Session\\SessionInterface',
+          ),
+           'className' => 'Symfony\\Component\\HttpFoundation\\Request',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
       '0b15bc312784d892673922e65f21c075' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'Symfony\\Component\\HttpFoundation',
@@ -5181,7 +5236,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\symfony\\http-foundation\\Request.php' => '6e50049629fe06284832e7445665ff7800a3556b2dfafe98fc7ebf0e1bd04575',
+      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\symfony\\http-foundation\\Request.php' => '0be852b84fb890ae05faf7b62a84324b8176c7996e0ecc33f521990aaff415a0',
     ),
   ),
 ));

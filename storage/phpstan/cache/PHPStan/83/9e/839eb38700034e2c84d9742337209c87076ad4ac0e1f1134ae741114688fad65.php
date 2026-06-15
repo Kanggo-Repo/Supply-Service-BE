@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Database/Concerns/BuildsWhereDateClauses.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-7bb287d8763b2a8f4a19224749cb4dcf65c156187920b647060d61df68bcc73f-8.5.4',
+   'variableKey' => 'v2-19d812e96ab058e535eb191413c62819da4aea74772c4cd2c1085b7f350830e0-8.3.31',
    'data' => 
   array (
     'classes' => 

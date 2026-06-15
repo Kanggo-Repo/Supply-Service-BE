@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Log/Logger.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-b7382fcab927960291e1c6b595cb0755b46e4fe6d7d94f91e7372a268a61fdd1-8.5.4',
+   'variableKey' => 'v2-b7382fcab927960291e1c6b595cb0755b46e4fe6d7d94f91e7372a268a61fdd1-8.3.31',
    'data' => 
   array (
     'classes' => 

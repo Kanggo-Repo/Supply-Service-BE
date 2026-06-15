@@ -20461,7 +20461,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     1 => 
     array (
       'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php' => '2041a692d35d142f617d78fd914fa5b24b77ae9d6f12b20888861ab461cf4487',
-      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php' => '668ab32e79170a98373e12b87321d7cc6cf1b42aa6fb7db301558d81bf3db5e7',
+      'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php' => '53fef9eb409578649b19614ca5d45cebb5271d0d58256229d73649e9f8a8e02a',
       'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Conditionable\\Traits\\Conditionable.php' => '5697fdba0acb78ca0b4e122e5c459cd5d97d000ed9b14fed31271cb7ffd44225',
       'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php' => 'b90103bc7248a11bd7629c525e064a45a50dd93ae0d836bcb79937e63f0b3568',
       'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\QueriesRelationships.php' => '263edd7c8572a64f5d45c5813b92f14e85031a941b02d030bf781a7f0ef5a7ce',

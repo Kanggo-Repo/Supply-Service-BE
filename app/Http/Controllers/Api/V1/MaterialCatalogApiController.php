@@ -204,6 +204,12 @@ class MaterialCatalogApiController extends Controller
             ], 422);
         }
 
+        $duplicate = $this->findDuplicate($normalizedFamily, $modelClass, $attributes);
+
+        if ($duplicate !== null) {
+            return response()->json($this->duplicateErrorPayload($duplicate), 422);
+        }
+
         $material = $modelClass::query()->create($attributes);
 
         return response()->json([
@@ -237,6 +243,12 @@ class MaterialCatalogApiController extends Controller
                     'payload' => ['No allowed update attributes were provided.'],
                 ],
             ], 422);
+        }
+
+        $duplicate = $this->findDuplicate($normalizedFamily, $material::class, $attributes, $material);
+
+        if ($duplicate !== null) {
+            return response()->json($this->duplicateErrorPayload($duplicate), 422);
         }
 
         $material->fill($attributes);
@@ -280,6 +292,63 @@ class MaterialCatalogApiController extends Controller
         $modelClass = SupplyMaterialRegistry::modelForFamily($family);
 
         return $modelClass ? $modelClass::query()->with('storeLocation.store')->find($id) : null;
+    }
+
+    /**
+     * Find an existing active material in the same family whose identity fields
+     * match the row the given attributes would produce — a true duplicate (same
+     * product at the same store, price ignored). NULL and '' are treated as
+     * equal so partially-filled rows still collide.
+     *
+     * @param  class-string<Model>  $modelClass
+     * @param  array<string, mixed>  $attributes
+     */
+    private function findDuplicate(string $family, string $modelClass, array $attributes, ?Model $current = null): ?Model
+    {
+        $query = $modelClass::query();
+
+        foreach (SupplyMaterialRegistry::identityFields($family) as $field) {
+            if (array_key_exists($field, $attributes)) {
+                $value = $attributes[$field];
+            } elseif ($current !== null) {
+                $value = $current->getAttribute($field);
+            } else {
+                $value = null;
+            }
+
+            if (is_string($value)) {
+                $value = trim($value);
+            }
+
+            if ($value === null || $value === '') {
+                $query->where(function ($inner) use ($field): void {
+                    $inner->whereNull($field)->orWhere($field, '');
+                });
+            } else {
+                $query->where($field, $value);
+            }
+        }
+
+        if ($current !== null) {
+            $query->whereKeyNot($current->getKey());
+        }
+
+        return $query->first();
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    private function duplicateErrorPayload(Model $duplicate): array
+    {
+        return [
+            'message' => 'The given data was invalid.',
+            'errors' => [
+                'duplicate' => [
+                    'Data serupa sudah ada (ID '.$duplicate->getKey().') di toko yang sama. Ubah entri yang ada lewat Edit, jangan membuat data baru.',
+                ],
+            ],
+        ];
     }
 
     /**

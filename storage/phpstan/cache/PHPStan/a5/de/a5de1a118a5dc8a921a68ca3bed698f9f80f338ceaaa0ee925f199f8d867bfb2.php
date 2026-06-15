@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Queue/Console/ListFailedCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Queue\Console\ListFailedCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-b31aff29a045099bb450bdfba7eddaf92056a279d316053c3fd8cf6a65331f4d-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-e4447191b904171db822994dc8fcf8e5703adee3f703d93cc6a683e7b5789ced-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -48,7 +48,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       ),
     ),
     'startLine' => 10,
-    'endLine' => 149,
+    'endLine' => 157,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Console\\Command',
@@ -340,7 +340,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return string|null
  */',
         'startLine' => 93,
-        'endLine' => 102,
+        'endLine' => 110,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -370,8 +370,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 110,
-            'endLine' => 110,
+            'startLine' => 118,
+            'endLine' => 118,
             'startColumn' => 37,
             'endColumn' => 44,
             'parameterIndex' => 0,
@@ -389,8 +389,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  array  $payload
  * @return string|null
  */',
-        'startLine' => 110,
-        'endLine' => 115,
+        'startLine' => 118,
+        'endLine' => 123,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -428,8 +428,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 123,
-            'endLine' => 123,
+            'startLine' => 131,
+            'endLine' => 131,
             'startColumn' => 42,
             'endColumn' => 52,
             'parameterIndex' => 0,
@@ -447,8 +447,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  array  $jobs
  * @return void
  */',
-        'startLine' => 123,
-        'endLine' => 131,
+        'startLine' => 131,
+        'endLine' => 139,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -486,8 +486,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 139,
-            'endLine' => 139,
+            'startLine' => 147,
+            'endLine' => 147,
             'startColumn' => 48,
             'endColumn' => 58,
             'parameterIndex' => 0,
@@ -505,8 +505,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  array  $jobs
  * @return void
  */',
-        'startLine' => 139,
-        'endLine' => 148,
+        'startLine' => 147,
+        'endLine' => 156,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

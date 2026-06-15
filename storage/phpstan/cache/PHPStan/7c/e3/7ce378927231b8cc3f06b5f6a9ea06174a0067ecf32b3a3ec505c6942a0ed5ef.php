@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Console/Scheduling/SchedulePauseCommand.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Console\Scheduling\SchedulePauseCommand
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-1a4d523c7e25eab8d5a110cc7a17df7e90acdb116e11ee9de91ada26641cb5f1-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-0096c7fa3d795bfc34882072a28e77ea7fecd1f06b1a57aedd69ebe867d82ce5-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -48,7 +48,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       ),
     ),
     'startLine' => 11,
-    'endLine' => 36,
+    'endLine' => 42,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Console\\Command',
@@ -174,7 +174,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return int
  */',
         'startLine' => 26,
-        'endLine' => 35,
+        'endLine' => 41,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

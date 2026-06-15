@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Validation/Rules/DatabaseRule.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Validation\Rules\DatabaseRule
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-cbb6aa0307371a4ae4357b21db6458b893aedb533f80b8c17f8e8bfd2aa335f9-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-a59c6d3b6c0251724091c57b37a6eb4aef1246a9ef214c27a51edeaae4b7c9c9-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -710,10 +710,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               array (
                 'startLine' => 184,
                 'endLine' => 184,
-                'startTokenPos' => 673,
-                'startFilePos' => 4352,
-                'endTokenPos' => 673,
-                'endFilePos' => 4363,
+                'startTokenPos' => 680,
+                'startFilePos' => 4366,
+                'endTokenPos' => 680,
+                'endFilePos' => 4377,
               ),
             ),
             'type' => NULL,
@@ -772,10 +772,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               array (
                 'startLine' => 197,
                 'endLine' => 197,
-                'startTokenPos' => 705,
-                'startFilePos' => 4649,
-                'endTokenPos' => 705,
-                'endFilePos' => 4660,
+                'startTokenPos' => 712,
+                'startFilePos' => 4663,
+                'endTokenPos' => 712,
+                'endFilePos' => 4674,
               ),
             ),
             'type' => NULL,

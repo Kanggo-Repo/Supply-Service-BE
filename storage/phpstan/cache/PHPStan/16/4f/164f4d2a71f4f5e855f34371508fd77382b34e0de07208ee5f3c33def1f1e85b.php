@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Database/Schema/Builder.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Illuminate\Database\Schema\Builder
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-a8ae3e044d958be32555156833c6d13c1f6083c2c3b373fdb54ac828ca799e84-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-f770a78b811bfaf40bc23ca356aedcfb8d654443591160758946ef48e274bf5f-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 
@@ -3378,10 +3378,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               array (
                 'startLine' => 758,
                 'endLine' => 758,
-                'startTokenPos' => 2862,
-                'startFilePos' => 20703,
-                'endTokenPos' => 2862,
-                'endFilePos' => 20706,
+                'startTokenPos' => 2873,
+                'startFilePos' => 20734,
+                'endTokenPos' => 2873,
+                'endFilePos' => 20737,
               ),
             ),
             'type' => NULL,

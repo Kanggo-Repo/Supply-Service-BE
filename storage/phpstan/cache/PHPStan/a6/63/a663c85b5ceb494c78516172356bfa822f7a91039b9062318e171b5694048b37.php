@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../spatie/laravel-health/src/Traits/HasDatabaseConnection.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Spatie\Health\Traits\HasDatabaseConnection
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-851dbf94061d758a14912289ba9a12cd267c99d68c5888dab299179c7f9a1d0f-8.5.4-6.70.0.1',
+   'variableKey' => 'v2-851dbf94061d758a14912289ba9a12cd267c99d68c5888dab299179c7f9a1d0f-8.3.31-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 

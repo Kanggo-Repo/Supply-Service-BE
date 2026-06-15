@@ -944,7 +944,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\phpunit\\php-code-coverage\\src\\Report\\Html\\Renderer.php' => 
     array (
-      0 => '092b5efa1553e0067e4ac2f2afede5675ba0276c04e0f02a70e2b108cc23d4e6',
+      0 => '8cd487de49f00246e8fcb43167288486a1c0917e8fb17fec92cbd4e76fc1d246',
       1 => 
       array (
         0 => 'sebastianbergmann\\codecoverage\\report\\html\\renderer',
@@ -954,13 +954,14 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'sebastianbergmann\\codecoverage\\report\\html\\__construct',
         1 => 'sebastianbergmann\\codecoverage\\report\\html\\renderitemtemplate',
         2 => 'sebastianbergmann\\codecoverage\\report\\html\\setcommontemplatevariables',
-        3 => 'sebastianbergmann\\codecoverage\\report\\html\\breadcrumbs',
-        4 => 'sebastianbergmann\\codecoverage\\report\\html\\activebreadcrumb',
-        5 => 'sebastianbergmann\\codecoverage\\report\\html\\inactivebreadcrumb',
-        6 => 'sebastianbergmann\\codecoverage\\report\\html\\pathtoroot',
-        7 => 'sebastianbergmann\\codecoverage\\report\\html\\coveragebar',
-        8 => 'sebastianbergmann\\codecoverage\\report\\html\\colorlevel',
-        9 => 'sebastianbergmann\\codecoverage\\report\\html\\runtimestring',
+        3 => 'sebastianbergmann\\codecoverage\\report\\html\\escapehtml',
+        4 => 'sebastianbergmann\\codecoverage\\report\\html\\breadcrumbs',
+        5 => 'sebastianbergmann\\codecoverage\\report\\html\\activebreadcrumb',
+        6 => 'sebastianbergmann\\codecoverage\\report\\html\\inactivebreadcrumb',
+        7 => 'sebastianbergmann\\codecoverage\\report\\html\\pathtoroot',
+        8 => 'sebastianbergmann\\codecoverage\\report\\html\\coveragebar',
+        9 => 'sebastianbergmann\\codecoverage\\report\\html\\colorlevel',
+        10 => 'sebastianbergmann\\codecoverage\\report\\html\\runtimestring',
       ),
       3 => 
       array (
@@ -968,7 +969,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\phpunit\\php-code-coverage\\src\\Report\\Html\\Renderer\\Dashboard.php' => 
     array (
-      0 => 'fe70d1b8c54d0aba549ce8dd7916666eb4349c0cfa2feaec592baa6439982454',
+      0 => '057b9dd5ab31b754e139ed6dbac7cce18d6979f920780b754c357689754c4c71',
       1 => 
       array (
         0 => 'sebastianbergmann\\codecoverage\\report\\html\\dashboard',
@@ -988,7 +989,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\phpunit\\php-code-coverage\\src\\Report\\Html\\Renderer\\Directory.php' => 
     array (
-      0 => 'bd1ab765c5aab9549e42dca02492d4b043366be6f88178f75797135d831292eb',
+      0 => '50b0bd5241cce0504c1a48aa003dd79626e596c206d093a8492ed808ec300f91',
       1 => 
       array (
         0 => 'sebastianbergmann\\codecoverage\\report\\html\\directory',
@@ -2241,7 +2242,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\phpunit\\php-code-coverage\\src\\Version.php' => 
     array (
-      0 => '62a4c86037d8a5e6dd3130eebb781864efebbc2e2e9925ae5a226388c314428e',
+      0 => 'bc36dc6e17d39a21541f03e4d82eba915fbf1de01bec5d3fede934c1f429723d',
       1 => 
       array (
         0 => 'sebastianbergmann\\codecoverage\\version',

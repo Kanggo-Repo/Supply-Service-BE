@@ -296,4 +296,38 @@ class SupplyMaterialRegistry
             ],
         };
     }
+
+    /**
+     * Fields that identify a material for duplicate detection: the descriptive
+     * attributes (brand, colour, dimensions, packaging, store/location) minus
+     * price amounts, photo, and the store-derived free-text address. Two active
+     * rows of the same family that match on all of these are true duplicates
+     * (the same product at the same store) regardless of price.
+     *
+     * @return list<string>
+     */
+    public static function identityFields(string $family): array
+    {
+        $excluded = [
+            'photo',
+            // store / address / short_address are denormalised snapshots of
+            // store_location_id (kept in sync by SyncsStoreLocationSnapshot), so
+            // the store identity is carried by store_location_id alone.
+            'store',
+            'address',
+            'short_address',
+            'price_unit',
+            'purchase_price',
+            'package_price',
+            'price_per_piece',
+            'price_per_package',
+            'comparison_price_per_kg',
+            'comparison_price_per_m3',
+            'comparison_price_per_m2',
+            'comparison_price_per_m',
+            'comparison_price',
+        ];
+
+        return array_values(array_diff(self::writableFields($family), $excluded));
+    }
 }

@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1780461145,
+	'lastFullAnalysisTime' => 1781513363,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.2.1',
@@ -24,7 +24,7 @@ return [
   ),
   'composerLocks' => 
   array (
-    'C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/composer.lock' => 'ff6287c2f1b5e5823cf07021f53b82c6d929a535785772a1ced00abe67f4c810',
+    'C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/composer.lock' => '5f2e91832f7c396745aa686f5e00a74e8616ec8fbed0ccca620552d500042b57',
   ),
   'composerInstalled' => 
   array (
@@ -242,9 +242,9 @@ return [
         ),
         'guzzlehttp/guzzle' => 
         array (
-          'pretty_version' => '7.10.3',
-          'version' => '7.10.3.0',
-          'reference' => '47ba23c7a55247e2e1b7407aca90e9bbed0d9d86',
+          'pretty_version' => '7.11.0',
+          'version' => '7.11.0.0',
+          'reference' => 'c987f8ce84b8434fa430795eca0f3430663da72b',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../guzzlehttp/guzzle',
           'aliases' => 
@@ -254,9 +254,9 @@ return [
         ),
         'guzzlehttp/promises' => 
         array (
-          'pretty_version' => '2.4.1',
-          'version' => '2.4.1.0',
-          'reference' => '09e8a212562fb1fb6a512c4156ed71525969d6c2',
+          'pretty_version' => '2.5.0',
+          'version' => '2.5.0.0',
+          'reference' => '4360e982f87f5f258bf872d094647791db2f4c8e',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../guzzlehttp/promises',
           'aliases' => 
@@ -266,9 +266,9 @@ return [
         ),
         'guzzlehttp/psr7' => 
         array (
-          'pretty_version' => '2.10.1',
-          'version' => '2.10.1.0',
-          'reference' => '73ab136360b5dfd858006eae9795e8fe43c80361',
+          'pretty_version' => '2.11.0',
+          'version' => '2.11.0.0',
+          'reference' => 'bbb5e61349fa5cb822b3e87842b951088b76b81f',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../guzzlehttp/psr7',
           'aliases' => 
@@ -278,9 +278,9 @@ return [
         ),
         'guzzlehttp/uri-template' => 
         array (
-          'pretty_version' => 'v1.0.5',
-          'version' => '1.0.5.0',
-          'reference' => '4f4bbd4e7172148801e76e3decc1e559bdee34e1',
+          'pretty_version' => 'v1.0.6',
+          'version' => '1.0.6.0',
+          'reference' => 'eef7f87bab6f204eba3c39224d8075c70c637946',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../guzzlehttp/uri-template',
           'aliases' => 
@@ -317,7 +317,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/broadcasting' => 
@@ -325,7 +325,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/bus' => 
@@ -333,7 +333,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/cache' => 
@@ -341,7 +341,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/collections' => 
@@ -349,7 +349,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/concurrency' => 
@@ -357,7 +357,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/conditionable' => 
@@ -365,7 +365,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/config' => 
@@ -373,7 +373,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/console' => 
@@ -381,7 +381,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/container' => 
@@ -389,7 +389,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/contracts' => 
@@ -397,7 +397,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/cookie' => 
@@ -405,7 +405,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/database' => 
@@ -413,7 +413,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/encryption' => 
@@ -421,7 +421,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/events' => 
@@ -429,7 +429,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/filesystem' => 
@@ -437,7 +437,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/hashing' => 
@@ -445,7 +445,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/http' => 
@@ -453,7 +453,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/json-schema' => 
@@ -461,7 +461,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/log' => 
@@ -469,7 +469,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/macroable' => 
@@ -477,7 +477,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/mail' => 
@@ -485,7 +485,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/notifications' => 
@@ -493,7 +493,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/pagination' => 
@@ -501,7 +501,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/pipeline' => 
@@ -509,7 +509,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/process' => 
@@ -517,7 +517,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/queue' => 
@@ -525,7 +525,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/redis' => 
@@ -533,7 +533,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/reflection' => 
@@ -541,7 +541,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/routing' => 
@@ -549,7 +549,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/session' => 
@@ -557,7 +557,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/support' => 
@@ -565,7 +565,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/testing' => 
@@ -573,7 +573,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/translation' => 
@@ -581,7 +581,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/validation' => 
@@ -589,7 +589,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'illuminate/view' => 
@@ -597,7 +597,7 @@ return [
           'dev_requirement' => false,
           'replaced' => 
           array (
-            0 => 'v13.11.2',
+            0 => 'v13.14.0',
           ),
         ),
         'jean85/pretty-package-versions' => 
@@ -619,6 +619,18 @@ return [
           array (
             0 => '*',
           ),
+        ),
+        'laminas/laminas-diactoros' => 
+        array (
+          'pretty_version' => '3.8.0',
+          'version' => '3.8.0.0',
+          'reference' => '60c182916b2749480895601649563970f3f12ec4',
+          'type' => 'library',
+          'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laminas/laminas-diactoros',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => false,
         ),
         'larastan/larastan' => 
         array (
@@ -646,9 +658,9 @@ return [
         ),
         'laravel/boost' => 
         array (
-          'pretty_version' => 'v2.4.8',
-          'version' => '2.4.8.0',
-          'reference' => 'd11d720cf9537f8d236a11d973e99563a598ec9c',
+          'pretty_version' => 'v2.4.9',
+          'version' => '2.4.9.0',
+          'reference' => 'f0359e55f6c3782023a35baf1d3df817053d69e8',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laravel/boost',
           'aliases' => 
@@ -658,9 +670,9 @@ return [
         ),
         'laravel/framework' => 
         array (
-          'pretty_version' => 'v13.11.2',
-          'version' => '13.11.2.0',
-          'reference' => '4148042bf6ee01edd05408f1f66d91b231f85c25',
+          'pretty_version' => 'v13.14.0',
+          'version' => '13.14.0.0',
+          'reference' => 'e60b1c817a9ef7da319e4007de6cfda5301a58c0',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laravel/framework',
           'aliases' => 
@@ -670,9 +682,9 @@ return [
         ),
         'laravel/mcp' => 
         array (
-          'pretty_version' => 'v0.7.0',
-          'version' => '0.7.0.0',
-          'reference' => '3513b4feca5f1678be4d2261dcfa8e456436d02a',
+          'pretty_version' => 'v0.7.2',
+          'version' => '0.7.2.0',
+          'reference' => '08962a276357f89164f78b38407c08187ab26cfe',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laravel/mcp',
           'aliases' => 
@@ -680,11 +692,23 @@ return [
           ),
           'dev_requirement' => true,
         ),
+        'laravel/octane' => 
+        array (
+          'pretty_version' => 'v2.17.5',
+          'version' => '2.17.5.0',
+          'reference' => '058ae4d7109eed40836dc42960f9388b9bf71f73',
+          'type' => 'library',
+          'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laravel/octane',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => false,
+        ),
         'laravel/pail' => 
         array (
-          'pretty_version' => 'v1.2.6',
-          'version' => '1.2.6.0',
-          'reference' => 'aa71a01c309e7f66bc2ec4fb1a59291b82eb4abf',
+          'pretty_version' => 'v1.2.7',
+          'version' => '1.2.7.0',
+          'reference' => '2f7d27dada8effc48b8c424445a69cca7007daaa',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laravel/pail',
           'aliases' => 
@@ -694,9 +718,9 @@ return [
         ),
         'laravel/pao' => 
         array (
-          'pretty_version' => 'v1.0.6',
-          'version' => '1.0.6.0',
-          'reference' => '02f62a64c2b60af44a418ee490fee193590d8269',
+          'pretty_version' => 'v1.1.0',
+          'version' => '1.1.0.0',
+          'reference' => '519eecdefb9d5da362876376b52207c8f11b477c',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../laravel/pao',
           'aliases' => 
@@ -1002,9 +1026,9 @@ return [
         ),
         'pestphp/pest' => 
         array (
-          'pretty_version' => 'v4.7.0',
-          'version' => '4.7.0.0',
-          'reference' => '2fc75cfcf03c041c804778fa894282234adc3c66',
+          'pretty_version' => 'v4.7.2',
+          'version' => '4.7.2.0',
+          'reference' => '40b88b62ef8a7c6fcae5fc28f1fa747f601c131b',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../pestphp/pest',
           'aliases' => 
@@ -1178,9 +1202,9 @@ return [
         ),
         'phpunit/php-code-coverage' => 
         array (
-          'pretty_version' => '12.5.6',
-          'version' => '12.5.6.0',
-          'reference' => '876099a072646c7745f673d7aeab5382c4439691',
+          'pretty_version' => '12.5.7',
+          'version' => '12.5.7.0',
+          'reference' => '186dab580576598076de6818596d12b61801880e',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../phpunit/php-code-coverage',
           'aliases' => 
@@ -1238,9 +1262,9 @@ return [
         ),
         'phpunit/phpunit' => 
         array (
-          'pretty_version' => '12.5.24',
-          'version' => '12.5.24.0',
-          'reference' => 'd75dd30597caa80e72fad2ef7904601a30ef1046',
+          'pretty_version' => '12.5.28',
+          'version' => '12.5.28.0',
+          'reference' => '5895d05f5bf421ed230fbd76e1277e4b8955def4',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../phpunit/phpunit',
           'aliases' => 
@@ -1346,6 +1370,7 @@ return [
           'provided' => 
           array (
             0 => '1.0',
+            1 => '^1.0',
           ),
         ),
         'psr/http-message' => 
@@ -1366,6 +1391,7 @@ return [
           'provided' => 
           array (
             0 => '1.0',
+            1 => '^1.1 || ^2.0',
           ),
         ),
         'psr/log' => 
@@ -1412,9 +1438,9 @@ return [
         ),
         'psy/psysh' => 
         array (
-          'pretty_version' => 'v0.12.22',
-          'version' => '0.12.22.0',
-          'reference' => '3be75d5b9244936dd4ac62ade2bfb004d13acf0f',
+          'pretty_version' => 'v0.12.23',
+          'version' => '0.12.23.0',
+          'reference' => '4dcc0f08047d52bbde475eda481146fd8e27e1a4',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../psy/psysh',
           'aliases' => 
@@ -1516,9 +1542,9 @@ return [
         ),
         'sebastian/environment' => 
         array (
-          'pretty_version' => '8.1.0',
-          'version' => '8.1.0.0',
-          'reference' => 'b121608b28a13f721e76ffbbd386d08eff58f3f6',
+          'pretty_version' => '8.1.2',
+          'version' => '8.1.2.0',
+          'reference' => '9d32c685773823b1983e256ae4ecd48a10d6e439',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../sebastian/environment',
           'aliases' => 
@@ -1540,9 +1566,9 @@ return [
         ),
         'sebastian/global-state' => 
         array (
-          'pretty_version' => '8.0.2',
-          'version' => '8.0.2.0',
-          'reference' => 'ef1377171613d09edd25b7816f05be8313f9115d',
+          'pretty_version' => '8.0.3',
+          'version' => '8.0.3.0',
+          'reference' => 'b164d3274d6537ab462591c5755f76a8f5b1aae9',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../sebastian/global-state',
           'aliases' => 
@@ -1716,9 +1742,9 @@ return [
         ),
         'symfony/clock' => 
         array (
-          'pretty_version' => 'v8.0.8',
-          'version' => '8.0.8.0',
-          'reference' => 'b55a638b189a6faa875e0ccdb00908fb87af95b3',
+          'pretty_version' => 'v7.4.8',
+          'version' => '7.4.8.0',
+          'reference' => '674fa3b98e21531dd040e613479f5f6fa8f32111',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/clock',
           'aliases' => 
@@ -1728,9 +1754,9 @@ return [
         ),
         'symfony/console' => 
         array (
-          'pretty_version' => 'v8.0.11',
-          'version' => '8.0.11.0',
-          'reference' => '3156577f46a38aa1b9323aad223de7a9cd426782',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => '85095d2573eaefaf35e40b9513a9bf09f72cd217',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/console',
           'aliases' => 
@@ -1740,9 +1766,9 @@ return [
         ),
         'symfony/css-selector' => 
         array (
-          'pretty_version' => 'v8.0.9',
-          'version' => '8.0.9.0',
-          'reference' => '3665cfade90565430909b906394c73c8739e57d0',
+          'pretty_version' => 'v7.4.9',
+          'version' => '7.4.9.0',
+          'reference' => 'b75663ed96cf4756e28e3105476f220f92886cc4',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/css-selector',
           'aliases' => 
@@ -1764,9 +1790,9 @@ return [
         ),
         'symfony/error-handler' => 
         array (
-          'pretty_version' => 'v8.0.8',
-          'version' => '8.0.8.0',
-          'reference' => 'c1119fe8dcfc3825ec74ec061b96ef0c8f281517',
+          'pretty_version' => 'v7.4.8',
+          'version' => '7.4.8.0',
+          'reference' => '8dd79d8af777ee6cba2fd4d98da6ffb839f3c0fa',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/error-handler',
           'aliases' => 
@@ -1776,9 +1802,9 @@ return [
         ),
         'symfony/event-dispatcher' => 
         array (
-          'pretty_version' => 'v8.0.9',
-          'version' => '8.0.9.0',
-          'reference' => '0c3c1a17604c4dbbec4b93fe162c538482096e1f',
+          'pretty_version' => 'v7.4.9',
+          'version' => '7.4.9.0',
+          'reference' => 'e4a2e29753c7801f7a8340e066cfa788f3bc8101',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/event-dispatcher',
           'aliases' => 
@@ -1808,9 +1834,9 @@ return [
         ),
         'symfony/finder' => 
         array (
-          'pretty_version' => 'v8.0.8',
-          'version' => '8.0.8.0',
-          'reference' => '8da41214757b87d97f181e3d14a4179286151007',
+          'pretty_version' => 'v7.4.8',
+          'version' => '7.4.8.0',
+          'reference' => 'e0be088d22278583a82da281886e8c3592fbf149',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/finder',
           'aliases' => 
@@ -1820,9 +1846,9 @@ return [
         ),
         'symfony/http-foundation' => 
         array (
-          'pretty_version' => 'v8.0.8',
-          'version' => '8.0.8.0',
-          'reference' => '02656f7ebeae5c155d659e946f6b3a33df24051b',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => 'bc354f47c62301e990b7874fa662326368508e2c',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/http-foundation',
           'aliases' => 
@@ -1832,9 +1858,9 @@ return [
         ),
         'symfony/http-kernel' => 
         array (
-          'pretty_version' => 'v8.0.12',
-          'version' => '8.0.12.0',
-          'reference' => 'c00291734c59c05c54c5a3abc2ab18e99b070157',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => '9df847980c436451f4f51d1284491bb4356dd989',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/http-kernel',
           'aliases' => 
@@ -1844,9 +1870,9 @@ return [
         ),
         'symfony/mailer' => 
         array (
-          'pretty_version' => 'v8.0.12',
-          'version' => '8.0.12.0',
-          'reference' => '5266d594e83593dff3492b5655ff6e8f38d67cfc',
+          'pretty_version' => 'v7.4.12',
+          'version' => '7.4.12.0',
+          'reference' => '5cefb712a25f320579615ba9e1942abaeade7dff',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/mailer',
           'aliases' => 
@@ -1856,9 +1882,9 @@ return [
         ),
         'symfony/mime' => 
         array (
-          'pretty_version' => 'v8.0.12',
-          'version' => '8.0.12.0',
-          'reference' => '7d9a72bbf0a9cb169ed1cbbbbbf709a592207fc1',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => 'a845722765c4f6b2ce88beaf4f4479975b186770',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/mime',
           'aliases' => 
@@ -1868,9 +1894,9 @@ return [
         ),
         'symfony/options-resolver' => 
         array (
-          'pretty_version' => 'v8.1.0',
-          'version' => '8.1.0.0',
-          'reference' => '88f9c561f678a02d54b897014049fa839e33ff82',
+          'pretty_version' => 'v7.4.8',
+          'version' => '7.4.8.0',
+          'reference' => '2888fcdc4dc2fd5f7c7397be78631e8af12e02b4',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/options-resolver',
           'aliases' => 
@@ -1892,9 +1918,9 @@ return [
         ),
         'symfony/polyfill-intl-grapheme' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => '4864388bfbd3001ce88e234fab652acd91fdc57e',
+          'pretty_version' => 'v1.38.1',
+          'version' => '1.38.1.0',
+          'reference' => 'e9247d281d694a5120554d9afaf54e070e88a603',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-intl-grapheme',
           'aliases' => 
@@ -1904,9 +1930,9 @@ return [
         ),
         'symfony/polyfill-intl-idn' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => '9614ac4d8061dc257ecc64cba1b140873dce8ad3',
+          'pretty_version' => 'v1.38.1',
+          'version' => '1.38.1.0',
+          'reference' => 'dc21118016c039a66235cf93d96b435ffb282412',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-intl-idn',
           'aliases' => 
@@ -1916,9 +1942,9 @@ return [
         ),
         'symfony/polyfill-intl-normalizer' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => '3833d7255cc303546435cb650316bff708a1c75c',
+          'pretty_version' => 'v1.38.0',
+          'version' => '1.38.0.0',
+          'reference' => '2d446c214bdbe5b71bde5011b060a05fece3ae6b',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-intl-normalizer',
           'aliases' => 
@@ -1928,9 +1954,9 @@ return [
         ),
         'symfony/polyfill-mbstring' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => '6a21eb99c6973357967f6ce3708cd55a6bec6315',
+          'pretty_version' => 'v1.38.1',
+          'version' => '1.38.1.0',
+          'reference' => '14c5439eec4ccff081ac14eca2dc57feb2a66d92',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-mbstring',
           'aliases' => 
@@ -1950,11 +1976,23 @@ return [
           ),
           'dev_requirement' => false,
         ),
+        'symfony/polyfill-php83' => 
+        array (
+          'pretty_version' => 'v1.38.1',
+          'version' => '1.38.1.0',
+          'reference' => '8339098cae28673c15cce00d80734af0453054e2',
+          'type' => 'library',
+          'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-php83',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => false,
+        ),
         'symfony/polyfill-php84' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => '88486db2c389b290bf87ff1de7ebc1e13e42bb06',
+          'pretty_version' => 'v1.38.1',
+          'version' => '1.38.1.0',
+          'reference' => 'f4e1dfaee5b74aba5964fe1fd4dfc7ba5e3085fa',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-php84',
           'aliases' => 
@@ -1964,9 +2002,9 @@ return [
         ),
         'symfony/polyfill-php85' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => 'fcfa4973a9917cef23f2e38774da74a2b7d115ee',
+          'pretty_version' => 'v1.38.1',
+          'version' => '1.38.1.0',
+          'reference' => 'ba2ba04f3352cfa2dcbbcb90aee13ed967f505b1',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-php85',
           'aliases' => 
@@ -1976,9 +2014,9 @@ return [
         ),
         'symfony/polyfill-php86' => 
         array (
-          'pretty_version' => 'v1.37.0',
-          'version' => '1.37.0.0',
-          'reference' => '33d8fc5a705481e21fe3a81212b26f9b1f61749c',
+          'pretty_version' => 'v1.38.0',
+          'version' => '1.38.0.0',
+          'reference' => 'fcec68d64f46dc84e1f6ffcf2c6dda40ff3143ad',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/polyfill-php86',
           'aliases' => 
@@ -2000,9 +2038,9 @@ return [
         ),
         'symfony/process' => 
         array (
-          'pretty_version' => 'v8.0.11',
-          'version' => '8.0.11.0',
-          'reference' => '26d89e459f037d2873300605d0a07e7a8ef84db0',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => 'f5804be144caceb570f6747519999636b664f24c',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/process',
           'aliases' => 
@@ -2012,9 +2050,9 @@ return [
         ),
         'symfony/psr-http-message-bridge' => 
         array (
-          'pretty_version' => 'v8.1.0',
-          'version' => '8.1.0.0',
-          'reference' => '67fd34de15ded1763aa1e330fe345f080a94022c',
+          'pretty_version' => 'v7.4.8',
+          'version' => '7.4.8.0',
+          'reference' => '76f1a57719a4a04c0ea18678a6c9305b5dcb9da8',
           'type' => 'symfony-bridge',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/psr-http-message-bridge',
           'aliases' => 
@@ -2024,9 +2062,9 @@ return [
         ),
         'symfony/routing' => 
         array (
-          'pretty_version' => 'v8.0.12',
-          'version' => '8.0.12.0',
-          'reference' => 'c7f22a665faa3e5212b8f042e0c5831a6b85492f',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => '3a162171bb008e5e0f15dce6581373a4c0e8390d',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/routing',
           'aliases' => 
@@ -2048,9 +2086,9 @@ return [
         ),
         'symfony/string' => 
         array (
-          'pretty_version' => 'v8.0.11',
-          'version' => '8.0.11.0',
-          'reference' => '39be2ad058a3c0bd558edca23e65f009865d75ff',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => '961683010db3b27ec6ebcd7308e6e1ee8fa7ffde',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/string',
           'aliases' => 
@@ -2060,9 +2098,9 @@ return [
         ),
         'symfony/translation' => 
         array (
-          'pretty_version' => 'v8.0.10',
-          'version' => '8.0.10.0',
-          'reference' => 'f63e9342e12646a57c91ef8a366a4f9d8e557b67',
+          'pretty_version' => 'v7.4.10',
+          'version' => '7.4.10.0',
+          'reference' => 'ada7578c30dd5feaa8259cff3e885069ea81ddde',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/translation',
           'aliases' => 
@@ -2092,9 +2130,9 @@ return [
         ),
         'symfony/uid' => 
         array (
-          'pretty_version' => 'v8.0.9',
-          'version' => '8.0.9.0',
-          'reference' => '4d9d6510bbe88ebb4608b7200d18606cdf80825c',
+          'pretty_version' => 'v7.4.9',
+          'version' => '7.4.9.0',
+          'reference' => '2676b524340abcfe4d6151ec698463cebafee439',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/uid',
           'aliases' => 
@@ -2104,9 +2142,9 @@ return [
         ),
         'symfony/var-dumper' => 
         array (
-          'pretty_version' => 'v8.0.8',
-          'version' => '8.0.8.0',
-          'reference' => 'cfb7badd53bf4177f6e9416cfbbccc13c0e773a1',
+          'pretty_version' => 'v7.4.8',
+          'version' => '7.4.8.0',
+          'reference' => '9510c3966f749a1d1ff0059e1eabef6cc621e7fd',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/var-dumper',
           'aliases' => 
@@ -2116,9 +2154,9 @@ return [
         ),
         'symfony/yaml' => 
         array (
-          'pretty_version' => 'v8.0.12',
-          'version' => '8.0.12.0',
-          'reference' => '2a36f4b8405d41fa31799b06874dbd45c1b16c30',
+          'pretty_version' => 'v7.4.13',
+          'version' => '7.4.13.0',
+          'reference' => 'a7ec3b1156faf8815db7683ec7c1e7338e6f977c',
           'type' => 'library',
           'install_path' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\vendor\\composer/../symfony/yaml',
           'aliases' => 
@@ -2436,12 +2474,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Parameter #1 $callback of method Illuminate\\Support\\Collection<int,mixed>::map() contains unresolvable type.',
        'file' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php',
-       'line' => 50,
+       'line' => 70,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 46,
+       'nodeLine' => 66,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'argument.unresolvableType',
        'metadata' => 
@@ -3726,7 +3764,7 @@ return [
       0 => 
       array (
         0 => 'sort',
-        1 => 333,
+        1 => 402,
       ),
     ),
   ),
@@ -5710,9 +5748,18 @@ return [
     array (
     ),
   ),
+  'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Helpers\\NumberHelper.php' => 
+  array (
+    'fileHash' => 'dfef9c697376700da48ddadf2777369a6a8746ca6f3dcdfc9a6288f8d965694a',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Models\\Brick.php',
+      1 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Models\\Sand.php',
+    ),
+  ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php' => 
   array (
-    'fileHash' => '3573f9317d5110124fc9c1ef06618df2fabbf73865e779f07d5b52cc38762e1c',
+    'fileHash' => 'bc2e09cd04f1d98c5faa920244011a067950c94e09c9e4ed9f284eb1e4035c07',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\routes\\api.php',
@@ -5720,7 +5767,7 @@ return [
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController.php' => 
   array (
-    'fileHash' => 'ca33f7567cc4d5f8627047045933f90aabb74fd1b4ebca6546116896bc456f70',
+    'fileHash' => '883bd9d79b20d19de1b307228e917cc9176f7dc29e13f55fba24a707a952530b',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\routes\\api.php',
@@ -5792,7 +5839,7 @@ return [
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\SupplyReferenceController.php' => 
   array (
-    'fileHash' => 'b7cd1745870f4add07d2b4ddf9fe233a3ca8b532e27afbd5d34082d11d2400be',
+    'fileHash' => '4d7f71341cb2bbd12e46a00b751de333561721bae940e93aaca853f69eefa1eb',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\routes\\api.php',
@@ -5857,7 +5904,7 @@ return [
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Models\\Brick.php' => 
   array (
-    'fileHash' => 'ca6171c122cceff97bf74479bfd016dc8e4973a90e3ffb2f396f9adf850479ea',
+    'fileHash' => '8d69832a7915a3fab7ecef3293c39a094ad5a309beebf4dc87eacb8470f1ab58',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php',
@@ -6056,7 +6103,7 @@ return [
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Models\\Sand.php' => 
   array (
-    'fileHash' => '87cca5de7ddc1abde35ceea3e1870d87dc7403d741c6a79a2697374e8a9c99dd',
+    'fileHash' => 'b0de2b48d0369159d29f0988d864349aeee584ee5b59d2a4ec6bef0bd52269d5',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php',
@@ -6281,7 +6328,7 @@ return [
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Support\\Supply\\SupplyMaterialRegistry.php' => 
   array (
-    'fileHash' => '5bfafa8d81d6809f96d090969b8440bade1e7ba2b6dd2089f1a15872437e9061',
+    'fileHash' => 'f0b1da35c5a81c649f9afbc9f43539df55d9506509cb29d2f8ecf1c27a70506b',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Console\\Commands\\AutoAssignMaterialsToStoreLocationsCommand.php',
@@ -6289,15 +6336,16 @@ return [
       2 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Console\\Commands\\RegisterStoresFromMaterialsCommand.php',
       3 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Console\\Commands\\RepairStoreMaterialAvailabilityCommand.php',
       4 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Console\\Commands\\ResyncStoreLocationMaterialAddressesCommand.php',
-      5 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController.php',
-      6 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialHistoryApiController.php',
-      7 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialRecycleBinApiController.php',
-      8 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialSettingsApiController.php',
-      9 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\StoreApiController.php',
-      10 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\StoreLocationApiController.php',
-      11 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\SupplyReferenceController.php',
-      12 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\UnitApiController.php',
-      13 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Services\\Store\\StoreMaterialSnapshotSynchronizer.php',
+      5 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php',
+      6 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController.php',
+      7 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialHistoryApiController.php',
+      8 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialRecycleBinApiController.php',
+      9 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialSettingsApiController.php',
+      10 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\StoreApiController.php',
+      11 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\StoreLocationApiController.php',
+      12 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\SupplyReferenceController.php',
+      13 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\UnitApiController.php',
+      14 => 'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Services\\Store\\StoreMaterialSnapshotSynchronizer.php',
     ),
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\config\\app.php' => 
@@ -6356,6 +6404,13 @@ return [
     array (
     ),
   ),
+  'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\config\\octane.php' => 
+  array (
+    'fileHash' => '586ea49e23b837e6901f75becd1bfeb10362270f108327eac7b93c6fce9c809e',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\config\\queue.php' => 
   array (
     'fileHash' => '6101774da7c8b79af46d0028f2b8b31a484c3f7eda10b76e5b27b6093ad364a4',
@@ -6365,7 +6420,7 @@ return [
   ),
   'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\config\\sentry.php' => 
   array (
-    'fileHash' => '781137465d53da1db66db77039849142659183afd6ddf2884de93afddb07736b',
+    'fileHash' => '84011bdc001a23a599d69339b16582bbce048d275915c79481f436f4ff66c1e2',
     'dependentFiles' => 
     array (
     ),
@@ -6991,6 +7046,867 @@ return [
            'returnType' => 'int',
            'parameters' => 
           array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Helpers\\NumberHelper.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Helpers\\NumberHelper',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedClassConstantsNode::__set_state(array(
+           'constants' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedClassConstantNode::__set_state(array(
+               'name' => 'ACCURACY_DECIMALS',
+               'value' => '11',
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'public' => true,
+           'private' => false,
+           'final' => false,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Standar akurasi internal: 11 digit desimal. Dipakai untuk semua
+     * perhitungan presisi tinggi (mis. volume m3) agar konsisten lintas service.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'format',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format angka untuk tampilan umum.
+     * Default: 2 desimal, nol di belakang disembunyikan.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimalSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'thousandsSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatResult',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format angka untuk hasil perhitungan (lebih detail).
+     * Default: 6 desimal, nol di belakang disembunyikan.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimalSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'thousandsSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatFixed',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format angka dengan behavior lama (number_format + trim nol).
+     * Cocok untuk currency/angka yang tidak butuh presisi panjang.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimalSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'thousandsSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatPlain',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format angka tanpa notasi ilmiah, menjaga presisi float.
+     * Default: desimal titik, tanpa pemisah ribuan.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'maxDecimals',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimalSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'thousandsSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'normalize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Normalisasi angka sederhana (cast/round).
+     * Dipertahankan untuk kebutuhan API, bukan untuk perhitungan internal.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => '?float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'accurate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Bulatkan angka ke standar akurasi (default 11 desimal) lalu kembalikan float.
+     * Menerima string/angka berformat Indonesia maupun US, dan mengembalikan 0.0
+     * untuk nilai null/invalid. Inilah satu-satunya sumber pembulatan presisi
+     * tinggi—panggil ini alih-alih menulis round($x, 11) di banyak tempat.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'truncate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Potong digit desimal tanpa pembulatan.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatTruncated',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format angka hasil truncation tanpa pembulatan.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimals',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'decimalSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'thousandsSeparator',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'currency',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format untuk currency (Rupiah)
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'weight',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format untuk weight (Kg)
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'volume',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format untuk volume (M3)
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'number',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'parse',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Parse input value to float (smart detection).
+     * Returns 0.0 if invalid or null.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'parseNullable',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Parse input user menjadi float standard.
+     * Support format Indonesia (1.234,56) dan US (1,234.56).
+     * Fleksibel mengenali titik dan koma.
+     */',
+             'namespace' => 'App\\Helpers',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => '?float',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
           ),
            'attributes' => 
           array (
@@ -9576,6 +10492,177 @@ return [
        'statements' => 
       array (
         0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedClassConstantsNode::__set_state(array(
+           'constants' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedClassConstantNode::__set_state(array(
+               'name' => 'PRICE_DECIMALS',
+               'value' => '2',
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'public' => true,
+           'private' => false,
+           'final' => false,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Stored decimals for both price columns (decimal(15, 2)).
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'numberhelper' => 'App\\Helpers\\NumberHelper',
+              'brickfactory' => 'Database\\Factories\\BrickFactory',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'booted',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'isKubikPackage',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'packageType',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'recomputePricing',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Keep the pricing invariant price_per_piece = comparison_price_per_m3 * package_volume.
+     * The source-of-truth field depends on the package mode, so only the derived
+     * field is recomputed:
+     *  - kubik  -> comparison (per m3) is entered, price_per_piece is derived.
+     *  - eceran -> price_per_piece is entered, comparison (per m3) is derived.
+     *
+     * @return array{price_per_piece?: float, comparison_price_per_m3?: float}
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'numberhelper' => 'App\\Helpers\\NumberHelper',
+              'brickfactory' => 'Database\\Factories\\BrickFactory',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'packageType',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'pricePerPiece',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'comparison',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'volume',
+               'type' => '?float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'newFactory',
            'phpDoc' => NULL,
@@ -10704,6 +11791,37 @@ return [
        'statements' => 
       array (
         0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedClassConstantsNode::__set_state(array(
+           'constants' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedClassConstantNode::__set_state(array(
+               'name' => 'COMPARISON_DECIMALS',
+               'value' => '2',
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'public' => true,
+           'private' => false,
+           'final' => false,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Stored decimals for comparison_price_per_m3 (column is decimal(15, 2)).
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'numberhelper' => 'App\\Helpers\\NumberHelper',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+        )),
+        1 => 
         \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
            'names' => 
           array (
@@ -10725,6 +11843,83 @@ return [
           array (
           ),
            'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'booted',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'recomputeComparison',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Comparison price per m3 is, by definition, package price divided by
+     * package volume. Returns null when it cannot be derived (no price or
+     * non-positive volume) so callers leave the existing value untouched.
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'numberhelper' => 'App\\Helpers\\NumberHelper',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => '?float',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'price',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'volume',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
           array (
           ),
         )),
@@ -13373,6 +14568,65 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
+     * @return list<string>
+     */',
+             'namespace' => 'App\\Support\\Supply',
+             'uses' => 
+            array (
+              'brick' => 'App\\Models\\Brick',
+              'cat' => 'App\\Models\\Cat',
+              'cement' => 'App\\Models\\Cement',
+              'ceramic' => 'App\\Models\\Ceramic',
+              'kasagypsum' => 'App\\Models\\KasaGypsum',
+              'nat' => 'App\\Models\\Nat',
+              'paku' => 'App\\Models\\Paku',
+              'pakutembak' => 'App\\Models\\PakuTembak',
+              'sand' => 'App\\Models\\Sand',
+              'steel' => 'App\\Models\\Steel',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'family',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'identityFields',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Fields that identify a material for duplicate detection: the descriptive
+     * attributes (brand, colour, dimensions, packaging, store/location) minus
+     * price amounts, photo, and the store-derived free-text address. Two active
+     * rows of the same family that match on all of these are true duplicates
+     * (the same product at the same store) regardless of price.
+     *
      * @return list<string>
      */',
              'namespace' => 'App\\Support\\Supply',

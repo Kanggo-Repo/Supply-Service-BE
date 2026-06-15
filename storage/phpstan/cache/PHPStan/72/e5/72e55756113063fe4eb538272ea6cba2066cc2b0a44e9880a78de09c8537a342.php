@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/telescope/src/Watchers/RedisWatcher.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-496984c8e4b954fcc0726559b098a7d9182e28142772aea39b6af1a35904a14f-8.5.4',
+   'variableKey' => 'v2-496984c8e4b954fcc0726559b098a7d9182e28142772aea39b6af1a35904a14f-8.3.31',
    'data' => 
   array (
     'classes' => 

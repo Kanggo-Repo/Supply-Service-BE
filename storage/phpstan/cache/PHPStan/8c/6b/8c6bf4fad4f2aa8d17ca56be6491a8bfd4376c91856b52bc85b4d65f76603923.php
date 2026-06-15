@@ -2,7 +2,7 @@
 
 // osfsl-C:/Users/ekaga/OneDrive/Documents/Code/K-3Repo/supply-service-be/vendor/composer/../laravel/framework/src/Illuminate/Foundation/Console/InterfaceMakeCommand.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-85cff9e2641d442fcb946dd6c903a7bd0434a324702871ea7e3ba3c02691eda0-8.5.4',
+   'variableKey' => 'v2-85cff9e2641d442fcb946dd6c903a7bd0434a324702871ea7e3ba3c02691eda0-8.3.31',
    'data' => 
   array (
     'classes' => 

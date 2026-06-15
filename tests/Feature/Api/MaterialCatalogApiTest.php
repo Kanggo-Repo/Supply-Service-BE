@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Brick;
+use App\Models\Cat;
 use App\Models\Cement;
 use App\Models\Nat;
 use App\Models\StoreLocation;
@@ -231,6 +232,80 @@ test('material catalog includes map warning metadata for missing store location 
         ->assertJsonPath('data.map_warning_action_context', 'store-location-edit')
         ->assertJsonPath('data.map_warning_store_id', $locationWithoutCoordinates->store_id)
         ->assertJsonPath('data.map_warning_store_location_id', $locationWithoutCoordinates->id);
+});
+
+test('material catalog rejects creating a true duplicate (same product and store, price ignored)', function (): void {
+    $location = StoreLocation::factory()->create();
+
+    $payload = [
+        'type' => 'Waterproofing',
+        'brand' => 'Aquaproof',
+        'color_code' => '061',
+        'color_name' => 'Abu-Abu',
+        'package_unit' => 'Galon',
+        'volume' => 4,
+        'store_location_id' => $location->id,
+        'purchase_price' => 250000,
+    ];
+
+    $this->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', $payload)
+        ->assertCreated();
+
+    // Same product + store; only the price differs -> still a duplicate.
+    $this->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', array_merge($payload, ['purchase_price' => 265000]))
+        ->assertUnprocessable()
+        ->assertJsonValidationErrors(['duplicate']);
+
+    expect(Cat::query()->count())->toBe(1);
+});
+
+test('material catalog allows the same product at a different store', function (): void {
+    $locationA = StoreLocation::factory()->create();
+    $locationB = StoreLocation::factory()->create();
+
+    $payload = [
+        'type' => 'Waterproofing',
+        'brand' => 'Aquaproof',
+        'color_code' => '061',
+        'color_name' => 'Abu-Abu',
+        'package_unit' => 'Galon',
+        'volume' => 4,
+        'purchase_price' => 250000,
+    ];
+
+    $this->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', array_merge($payload, ['store_location_id' => $locationA->id]))
+        ->assertCreated();
+
+    $this->withHeaders(trustedCatalogHeaders())
+        ->postJson('/api/v1/materials/cat', array_merge($payload, ['store_location_id' => $locationB->id]))
+        ->assertCreated();
+
+    expect(Cat::query()->count())->toBe(2);
+});
+
+test('material catalog rejects updating a material into a duplicate of another', function (): void {
+    $location = StoreLocation::factory()->create();
+
+    $base = [
+        'type' => 'Waterproofing',
+        'brand' => 'Aquaproof',
+        'color_name' => 'Abu-Abu',
+        'package_unit' => 'Galon',
+        'volume' => 4,
+        'store_location_id' => $location->id,
+    ];
+
+    Cat::query()->create(array_merge($base, ['color_code' => '061']));
+    $second = Cat::query()->create(array_merge($base, ['color_code' => '062']));
+
+    // Changing the second row's color_code to 061 would collide with the first.
+    $this->withHeaders(trustedCatalogHeaders())
+        ->putJson("/api/v1/materials/cat/{$second->id}", ['color_code' => '061'])
+        ->assertUnprocessable()
+        ->assertJsonValidationErrors(['duplicate']);
 });
 
 function trustedCatalogHeaders(): array

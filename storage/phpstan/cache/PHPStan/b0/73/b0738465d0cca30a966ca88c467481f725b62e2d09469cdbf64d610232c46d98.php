@@ -88,7 +88,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\DashboardSummaryApiController.php' => 
     array (
-      0 => '3573f9317d5110124fc9c1ef06618df2fabbf73865e779f07d5b52cc38762e1c',
+      0 => 'bc2e09cd04f1d98c5faa920244011a067950c94e09c9e4ed9f284eb1e4035c07',
       1 => 
       array (
         0 => 'app\\http\\controllers\\api\\v1\\dashboardsummaryapicontroller',
@@ -110,7 +110,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\MaterialCatalogApiController.php' => 
     array (
-      0 => 'ca33f7567cc4d5f8627047045933f90aabb74fd1b4ebca6546116896bc456f70',
+      0 => '883bd9d79b20d19de1b307228e917cc9176f7dc29e13f55fba24a707a952530b',
       1 => 
       array (
         0 => 'app\\http\\controllers\\api\\v1\\materialcatalogapicontroller',
@@ -124,12 +124,14 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         4 => 'app\\http\\controllers\\api\\v1\\update',
         5 => 'app\\http\\controllers\\api\\v1\\destroy',
         6 => 'app\\http\\controllers\\api\\v1\\resolvematerial',
-        7 => 'app\\http\\controllers\\api\\v1\\validatepayload',
-        8 => 'app\\http\\controllers\\api\\v1\\allowedsortcolumns',
-        9 => 'app\\http\\controllers\\api\\v1\\serializematerial',
-        10 => 'app\\http\\controllers\\api\\v1\\resolvemapwarningmetadata',
-        11 => 'app\\http\\controllers\\api\\v1\\resolvefamilylettercounts',
-        12 => 'app\\http\\controllers\\api\\v1\\buildletterpagemap',
+        7 => 'app\\http\\controllers\\api\\v1\\findduplicate',
+        8 => 'app\\http\\controllers\\api\\v1\\duplicateerrorpayload',
+        9 => 'app\\http\\controllers\\api\\v1\\validatepayload',
+        10 => 'app\\http\\controllers\\api\\v1\\allowedsortcolumns',
+        11 => 'app\\http\\controllers\\api\\v1\\serializematerial',
+        12 => 'app\\http\\controllers\\api\\v1\\resolvemapwarningmetadata',
+        13 => 'app\\http\\controllers\\api\\v1\\resolvefamilylettercounts',
+        14 => 'app\\http\\controllers\\api\\v1\\buildletterpagemap',
       ),
       3 => 
       array (
@@ -288,7 +290,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Http\\Controllers\\Api\\V1\\SupplyReferenceController.php' => 
     array (
-      0 => 'b7cd1745870f4add07d2b4ddf9fe233a3ca8b532e27afbd5d34082d11d2400be',
+      0 => '4d7f71341cb2bbd12e46a00b751de333561721bae940e93aaca853f69eefa1eb',
       1 => 
       array (
         0 => 'app\\http\\controllers\\api\\v1\\supplyreferencecontroller',
@@ -407,14 +409,17 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Models\\Brick.php' => 
     array (
-      0 => 'ca6171c122cceff97bf74479bfd016dc8e4973a90e3ffb2f396f9adf850479ea',
+      0 => '8d69832a7915a3fab7ecef3293c39a094ad5a309beebf4dc87eacb8470f1ab58',
       1 => 
       array (
         0 => 'app\\models\\brick',
       ),
       2 => 
       array (
-        0 => 'app\\models\\newfactory',
+        0 => 'app\\models\\booted',
+        1 => 'app\\models\\iskubikpackage',
+        2 => 'app\\models\\recomputepricing',
+        3 => 'app\\models\\newfactory',
       ),
       3 => 
       array (
@@ -637,13 +642,15 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Models\\Sand.php' => 
     array (
-      0 => '87cca5de7ddc1abde35ceea3e1870d87dc7403d741c6a79a2697374e8a9c99dd',
+      0 => 'b0de2b48d0369159d29f0988d864349aeee584ee5b59d2a4ec6bef0bd52269d5',
       1 => 
       array (
         0 => 'app\\models\\sand',
       ),
       2 => 
       array (
+        0 => 'app\\models\\booted',
+        1 => 'app\\models\\recomputecomparison',
       ),
       3 => 
       array (
@@ -942,7 +949,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Support\\Supply\\SupplyMaterialRegistry.php' => 
     array (
-      0 => '5bfafa8d81d6809f96d090969b8440bade1e7ba2b6dd2089f1a15872437e9061',
+      0 => 'f0b1da35c5a81c649f9afbc9f43539df55d9506509cb29d2f8ecf1c27a70506b',
       1 => 
       array (
         0 => 'app\\support\\supply\\supplymaterialregistry',
@@ -956,6 +963,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         4 => 'app\\support\\supply\\familyformodel',
         5 => 'app\\support\\supply\\namefield',
         6 => 'app\\support\\supply\\writablefields',
+        7 => 'app\\support\\supply\\identityfields',
       ),
       3 => 
       array (
@@ -1039,6 +1047,35 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\support\\observability\\beforesend',
         1 => 'app\\support\\observability\\mergeextra',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\ekaga\\OneDrive\\Documents\\Code\\K-3Repo\\supply-service-be\\app\\Helpers\\NumberHelper.php' => 
+    array (
+      0 => 'dfef9c697376700da48ddadf2777369a6a8746ca6f3dcdfc9a6288f8d965694a',
+      1 => 
+      array (
+        0 => 'app\\helpers\\numberhelper',
+      ),
+      2 => 
+      array (
+        0 => 'app\\helpers\\resolvedecimals',
+        1 => 'app\\helpers\\formatnumber',
+        2 => 'app\\helpers\\format',
+        3 => 'app\\helpers\\formatresult',
+        4 => 'app\\helpers\\formatfixed',
+        5 => 'app\\helpers\\formatplain',
+        6 => 'app\\helpers\\normalize',
+        7 => 'app\\helpers\\accurate',
+        8 => 'app\\helpers\\truncate',
+        9 => 'app\\helpers\\formattruncated',
+        10 => 'app\\helpers\\currency',
+        11 => 'app\\helpers\\weight',
+        12 => 'app\\helpers\\volume',
+        13 => 'app\\helpers\\parse',
+        14 => 'app\\helpers\\parsenullable',
       ),
       3 => 
       array (
