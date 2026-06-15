@@ -404,7 +404,7 @@ jobs:
           echo "===> Switch nginx upstream"
           NGINX_BACKUP="$(mktemp)"
           cp "$NGINX_CONFIG_FILE" "$NGINX_BACKUP"
-          sed -Ei "s|set \$upstream http://[^;]+:8000;|set \$upstream http://${TARGET_SERVICE}:8000;|g" "$NGINX_CONFIG_FILE"
+          sed -Ei "s#http://${APP_SERVICE_PREFIX}_[a-z]+:8000#http://${TARGET_SERVICE}:8000#g" "$NGINX_CONFIG_FILE"
 
           echo "===> Validate and reload nginx (retry + auto-restore on failure)"
           if ! docker exec "$NGINX_CONTAINER" nginx -t; then
